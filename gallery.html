@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StitchCraft Gallery — Browse our collection of custom stitching, alterations, bridal wear, and formal garments crafted in Chennai.">
+    <title>Gallery | StitchCraft Tailor & Alteration Shop</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='50' cy='50' r='46' stroke='%232C4A3E' stroke-width='2' stroke-opacity='0.4' fill='none'/%3E%3Ccircle cx='34' cy='34' r='9' stroke='%232C4A3E' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='66' cy='34' r='9' stroke='%232C4A3E' stroke-width='2.5' fill='none'/%3E%3Cline x1='40' y1='40' x2='70' y2='75' stroke='%232C4A3E' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='60' y1='40' x2='30' y2='75' stroke='%232C4A3E' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='50' r='3.5' fill='%232C4A3E'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#2C4A3E',secondary:'#F5F0E8'}}}}</script>
+</head>
+<body>
+<div id="navbar-container"></div>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background:linear-gradient(rgba(28,46,40,0.88),rgba(28,46,40,0.88)), url('images/bridal-wear.jpg') center/cover no-repeat;">
+    <div class="absolute inset-0 pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:48px 48px;"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+        <div class="section-tag mx-auto mb-4" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.85);">
+            <i class="fas fa-images text-[10px]"></i> Portfolio
+        </div>
+        <h1 class="text-white animate-on-scroll slide-up" style="font-family:'Playfair Display',serif;">Our <span class="accent-text">Craftsmanship</span> Gallery</h1>
+        <p class="text-white/60 mt-4 max-w-xl mx-auto animate-on-scroll slide-up" style="animation-delay:0.1s;">A visual journey through our finest work — from everyday alterations to elaborate bridal creations.</p>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="section-py bg-[var(--cream)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <!-- Filter Tabs -->
+        <div class="flex justify-center mb-10">
+            <div class="tab-bar border-none gap-2 flex-wrap justify-center" data-filter-bar>
+                <button class="tab-btn active" data-filter="all" id="filter-all-btn" style="border:1.5px solid var(--border-light);border-radius:999px;padding:8px 20px;">All Work</button>
+                <button class="tab-btn" data-filter="stitching" id="filter-stitching-btn" style="border:1.5px solid var(--border-light);border-radius:999px;padding:8px 20px;">Stitching</button>
+                <button class="tab-btn" data-filter="alterations" id="filter-alterations-btn" style="border:1.5px solid var(--border-light);border-radius:999px;padding:8px 20px;">Alterations</button>
+                <button class="tab-btn" data-filter="bridal" id="filter-bridal-btn" style="border:1.5px solid var(--border-light);border-radius:999px;padding:8px 20px;">Bridal</button>
+                <button class="tab-btn" data-filter="formal" id="filter-formal-btn" style="border:1.5px solid var(--border-light);border-radius:999px;padding:8px 20px;">Formal</button>
+            </div>
+        </div>
+
+        <!-- Masonry Gallery -->
+        <div class="gallery-grid animate-on-scroll fade-in">
+            <div class="gallery-item" data-category="stitching">
+                <img src="images/hero-tailor.jpg" alt="Custom suit stitching" loading="lazy" style="border-radius:12px;" onerror="this.src='images/hero.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Stitching</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Bespoke Suit</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="bridal">
+                <img src="images/bridal-wear.jpg" alt="Bridal lehenga" loading="lazy" style="border-radius:12px;" onerror="this.src='images/wedding-dress.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--accent)] text-white text-xs font-bold mb-1">Bridal</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Bridal Lehenga</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="alterations">
+                <img src="images/alteration-work.jpg" alt="Hem alteration" loading="lazy" style="border-radius:12px;" onerror="this.src='images/alteration-work.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Alterations</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Precision Hem Work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="formal">
+                <img src="images/formal-suits.jpg" alt="Formal suits" loading="lazy" style="border-radius:12px;" onerror="this.src='images/shop-interior.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Formal</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Formal Suit Collection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="stitching">
+                <img src="images/stitching-work.jpg" alt="Hand stitching detail" loading="lazy" style="border-radius:12px;" onerror="this.src='images/sewing.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Stitching</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Hand Stitching Detail</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="bridal">
+                <img src="images/measurement-session.jpg" alt="Bridal fitting session" loading="lazy" style="border-radius:12px;" onerror="this.src='images/measuring.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--accent)] text-white text-xs font-bold mb-1">Bridal</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Bridal Fitting Session</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="stitching">
+                <img src="images/fabric-collection.jpg" alt="Fabric selection" loading="lazy" style="border-radius:12px;" onerror="this.src='images/fabric-swatches.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Stitching</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Fabric Curation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="alterations">
+                <img src="images/about-shop.jpg" alt="Studio workspace" loading="lazy" style="border-radius:12px;" onerror="this.src='images/shop-interior.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Studio</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Our Workshop</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="formal">
+                <img src="images/hero-premium.jpg" alt="Premium formal atelier" loading="lazy" style="border-radius:12px;" onerror="this.src='images/shop-interior.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Formal</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Premium Atelier</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="bridal">
+                <img src="images/team.jpg" alt="Team at work" loading="lazy" style="border-radius:12px;" onerror="this.src='images/team.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Team</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Master Artisans at Work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="stitching">
+                <img src="images/hero-tailor.jpg" alt="Tailor crafting" loading="lazy" style="border-radius:12px;" onerror="this.src='images/hero.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Stitching</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Expert Crafting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="formal">
+                <img src="images/formal-suits.jpg" alt="Formal tailoring" loading="lazy" style="border-radius:12px;" onerror="this.src='images/wedding-dress.jpg'">
+                <div class="gallery-overlay" style="border-radius:12px;">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold mb-1">Formal</span>
+                        <p class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Corporate Wardrobe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16" style="background:var(--secondary);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="section-title mb-4 animate-on-scroll zoom-in">Like What You <span class="green-text">See?</span></h2>
+        <p class="text-[var(--text-muted)] max-w-xl mx-auto mb-8 animate-on-scroll fade-in" style="animation-delay:0.1s;">Book a consultation and let us create something equally beautiful for you.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll slide-up" style="animation-delay:0.2s;">
+            <a href="contact.html#booking" class="btn btn-primary btn-lg btn-rounded btn-shine" id="gallery-book-btn"><i class="fas fa-calendar-check text-sm"></i> Book Appointment</a>
+            <a href="services.html" class="btn btn-secondary btn-lg btn-rounded" id="gallery-services-btn">View Services</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-container"></div>
+<script src="components.js"></script>
+<script src="script.js"></script>
+<script>
+// Gallery filter tabs
+document.querySelectorAll('.tab-btn[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn[data-filter]').forEach(b => {
+            b.classList.remove('active');
+            b.style.background = '';
+            b.style.color = '';
+            b.style.borderColor = 'var(--border-light)';
+        });
+        btn.classList.add('active');
+        btn.style.background = 'var(--primary)';
+        btn.style.color = 'white';
+        btn.style.borderColor = 'var(--primary)';
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
+        });
+    });
+});
+// Set initial style
+document.querySelector('.tab-btn[data-filter="all"]').style.background = 'var(--primary)';
+document.querySelector('.tab-btn[data-filter="all"]').style.color = 'white';
+document.querySelector('.tab-btn[data-filter="all"]').style.borderColor = 'var(--primary)';
+</script>
+</body>
+</html>

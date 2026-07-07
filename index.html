@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StitchCraft — Expert Tailor & Alteration Shop in Chennai. Custom stitching, precise alterations, bridal wear, and professional measurements. Book your appointment today.">
+    <title>StitchCraft | Expert Tailor & Alteration Shop – Chennai</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='50' cy='50' r='46' stroke='%232C4A3E' stroke-width='2' stroke-opacity='0.4' fill='none'/%3E%3Ccircle cx='34' cy='34' r='9' stroke='%232C4A3E' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='66' cy='34' r='9' stroke='%232C4A3E' stroke-width='2.5' fill='none'/%3E%3Cline x1='40' y1='40' x2='70' y2='75' stroke='%232C4A3E' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='60' y1='40' x2='30' y2='75' stroke='%232C4A3E' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='50' r='3.5' fill='%232C4A3E'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2C4A3E', secondary: '#F5F0E8' } } } }</script>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="relative min-h-[92vh] flex items-center overflow-hidden bg-[var(--cream)]">
+        <!-- Decorative background blobs -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute w-[600px] h-[600px] rounded-full" style="background:radial-gradient(circle,rgba(44,74,62,0.08) 0%,transparent 70%);top:-180px;right:-180px;"></div>
+            <div class="absolute w-[400px] h-[400px] rounded-full" style="background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);bottom:-100px;left:-100px;"></div>
+            <!-- Subtle grid -->
+            <div class="absolute inset-0" style="background-image:linear-gradient(rgba(44,74,62,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(44,74,62,0.03) 1px,transparent 1px);background-size:56px 56px;"></div>
+        </div>
+
+        <!-- Floating shape -->
+        <div class="absolute top-20 right-[5%] opacity-[0.08]" style="animation:float 7s ease-in-out infinite;">
+            <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+                <circle cx="70" cy="70" r="65" stroke="#2C4A3E" stroke-width="1.5" stroke-dasharray="8 6"/>
+                <circle cx="70" cy="70" r="45" stroke="#2C4A3E" stroke-width="1" fill="none"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-20 left-[4%] opacity-[0.06]" style="animation:float 9s ease-in-out infinite 2s;">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                <rect x="10" y="10" width="80" height="80" rx="12" stroke="#C9A96E" stroke-width="1.5" stroke-dasharray="6 4"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10 py-20">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-center xl:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(44,74,62,0.2)] bg-[rgba(44,74,62,0.06)] mb-6 animate-on-scroll fade-in">
+                        <span class="w-2 h-2 rounded-full bg-[var(--primary)]" style="animation:orbitPulse 2s ease infinite;"></span>
+                        <span class="text-[var(--primary)] text-xs font-bold uppercase tracking-[0.18em]">Premium Tailoring Studio</span>
+                        <span class="w-2 h-2 rounded-full bg-[var(--primary)]" style="animation:orbitPulse 2s ease infinite 0.5s;"></span>
+                    </div>
+
+                    <h1 class="font-bold leading-tight mb-6 animate-on-scroll slide-up text-[var(--text-dark)]" style="font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4rem);animation-delay:0.1s;">
+                        Where Every Stitch<br>
+                        Tells a <span class="green-text">Story</span>
+                    </h1>
+
+                    <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-8 max-w-lg xl:max-w-none mx-auto xl:mx-0 animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                        Expert custom stitching, precise alterations, and professional measurements — crafted with decades of artisan expertise in Chennai's most trusted tailor studio.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                        <a href="contact.html#booking" class="btn btn-primary btn-lg btn-shine btn-rounded" id="hero-book-btn">
+                            <i class="fas fa-calendar-check text-sm"></i> Book Appointment
+                        </a>
+                        <a href="services.html" class="btn btn-secondary btn-lg btn-rounded" id="hero-services-btn">
+                            View Services <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Stats row -->
+                    <div class="grid grid-cols-3 gap-6 mt-14 pt-10 border-t border-[var(--border-light)] animate-on-scroll slide-up" style="animation-delay:0.4s;">
+                        <div class="text-center xl:text-left">
+                            <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="18" data-suffix="+ Yrs">18+ Yrs</div>
+                            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Experience</div>
+                        </div>
+                        <div class="text-center xl:text-left">
+                            <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="5000" data-suffix="+">5000+</div>
+                            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Happy Clients</div>
+                        </div>
+                        <div class="text-center xl:text-left">
+                            <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="4.9" data-suffix="★">4.9★</div>
+                            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Image Card Stack -->
+                <div class="relative flex justify-center xl:justify-end animate-on-scroll zoom-in" style="animation-delay:0.2s;">
+                    <div class="relative w-full max-w-[500px]">
+                        <!-- Main image -->
+                        <div class="rounded-3xl overflow-hidden shadow-2xl" style="height:520px;border:1px solid rgba(44,74,62,0.12);">
+                            <img src="images/hero-tailor.jpg" alt="Master tailor at work" class="img-cover w-full h-full" onerror="this.src='images/hero.jpg'">
+                        </div>
+                        <!-- Floating badge: Experience -->
+                        <div class="absolute -left-6 top-12 bg-[var(--surface)] rounded-2xl shadow-xl p-4 border border-[var(--border-light)] animate-on-scroll slide-right" style="animation-delay:0.5s;">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(44,74,62,0.1);">
+                                    <i class="fas fa-scissors text-[var(--primary)] text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-[var(--text-dark)] text-sm" style="font-family:'Playfair Display',serif;">18+ Years</div>
+                                    <div class="text-xs text-[var(--text-muted)]">Expert Craftsmanship</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating badge: Turnaround -->
+                        <div class="absolute -right-6 bottom-20 bg-[var(--primary)] rounded-2xl shadow-xl p-4 animate-on-scroll slide-left" style="animation-delay:0.6s;">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/20">
+                                    <i class="fas fa-bolt text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white text-sm">Express Ready</div>
+                                    <div class="text-xs text-white/70">48hr Turnaround</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating image - small accent -->
+                        <div class="absolute -bottom-4 left-8 w-32 h-32 rounded-2xl overflow-hidden shadow-lg border-4 border-[var(--cream)] animate-on-scroll zoom-in" style="animation-delay:0.7s;">
+                            <img src="images/stitching-work.jpg" alt="Stitching detail" class="img-cover w-full h-full" onerror="this.src='images/sewing.jpg'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE STRIP ===== -->
+    <section class="py-6 bg-[var(--primary)] dark:bg-[var(--primary-dark)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 py-4 text-white/90">
+                    <i class="fas fa-cut text-white/70 text-xl sm:text-base"></i>
+                    <span class="font-semibold text-sm uppercase tracking-wider text-center sm:text-left">Custom Stitching</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 py-4 text-white/90">
+                    <i class="fas fa-ruler text-white/70 text-xl sm:text-base"></i>
+                    <span class="font-semibold text-sm uppercase tracking-wider text-center sm:text-left">Precise Alterations</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 py-4 text-white/90">
+                    <i class="fas fa-tape text-white/70 text-xl sm:text-base"></i>
+                    <span class="font-semibold text-sm uppercase tracking-wider text-center sm:text-left">Measurements</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 py-4 text-white/90">
+                    <i class="fas fa-gem text-white/70 text-xl sm:text-base"></i>
+                    <span class="font-semibold text-sm uppercase tracking-wider text-center sm:text-left">Bridal & Formal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES OVERVIEW ===== -->
+    <section class="section-py bg-[var(--cream)] dark:bg-[var(--cream)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in">
+                    <i class="fas fa-scissors text-[10px]"></i> Our Services
+                </div>
+                <h2 class="section-title animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    Everything Your Wardrobe <span class="green-text">Deserves</span>
+                </h2>
+                <p class="text-[var(--text-muted)] mt-4 max-w-2xl mx-auto animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    From everyday repairs to exquisite custom creations, we handle every garment with unmatched precision and care.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-cut text-[var(--primary)] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-3" style="font-family:'Playfair Display',serif;">Custom Stitching</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-4">Bespoke garments tailored to your exact measurements. Suits, shirts, salwars, sarees — crafted to perfection.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Hand-stitched finishing</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Full lining options</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Premium fabric guidance</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-ruler-combined text-[var(--primary)] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-3" style="font-family:'Playfair Display',serif;">Alterations & Repairs</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-4">Give your favourite garments new life. From hem adjustments to major restyling, we restore perfect fit.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Hem & length adjustments</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Waist & seam alterations</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Zip & button repairs</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-tape text-[var(--primary)] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-3" style="font-family:'Playfair Display',serif;">Professional Measurements</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-4">Precise body measurements by experienced stylists to ensure every garment fits like a second skin.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> 25+ body measurements</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Digital record keeping</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Free fitting sessions</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(201,169,110,0.12);">
+                        <i class="fas fa-ring text-[var(--accent)] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-3" style="font-family:'Playfair Display',serif;">Bridal & Occasion Wear</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-4">Make your special day unforgettable. Bridal gowns, lehengas, and occasion wear crafted with exceptional artistry.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--accent)] text-xs"></i> Designer consultations</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--accent)] text-xs"></i> Embroidery & embellishments</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--accent)] text-xs"></i> Multiple fittings included</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-tshirt text-[var(--primary)] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-3" style="font-family:'Playfair Display',serif;">Fabric Selection</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-4">Choose from our curated collection of premium fabrics — silks, cottons, linens, woolens, and more.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> 200+ fabric options</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Expert style guidance</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Import & local sourcing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-bolt text-[var(--primary)] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-3" style="font-family:'Playfair Display',serif;">Express Service</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-4">Last-minute needs? Our express service guarantees quality alterations and basic stitching in as little as 24–48 hours.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> 24hr rush options</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Same-day minor fixes</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Quality guaranteed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="services.html" class="btn btn-secondary btn-rounded btn-lg" id="all-services-btn">View All Services <i class="fas fa-arrow-right text-xs"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section-py" style="background:var(--secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in">
+                    <i class="fas fa-list-ol text-[10px]"></i> The Process
+                </div>
+                <h2 class="section-title animate-on-scroll slide-up" style="animation-delay:0.1s;">Simple. Precise. <span class="green-text">Perfect.</span></h2>
+                <p class="text-[var(--text-muted)] mt-4 max-w-xl mx-auto animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    Our streamlined process ensures every garment meets the highest standards, on time and on budget.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg" style="background:var(--primary);">
+                        <i class="fas fa-calendar-check text-white text-xl"></i>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-sm font-bold mb-3 -mt-10 ml-10 relative">1</div>
+                    <h4 class="font-bold text-[var(--text-dark)] mb-2" style="font-family:'Playfair Display',serif;">Book Appointment</h4>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed">Schedule your visit online or call us. Choose a time that works for you.</p>
+                </div>
+                <div class="flex flex-col items-center text-center animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg" style="background:var(--primary);">
+                        <i class="fas fa-tape text-white text-xl"></i>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-sm font-bold mb-3 -mt-10 ml-10 relative">2</div>
+                    <h4 class="font-bold text-[var(--text-dark)] mb-2" style="font-family:'Playfair Display',serif;">Measurements & Consult</h4>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed">Our expert takes precise measurements and discusses your style preferences.</p>
+                </div>
+                <div class="flex flex-col items-center text-center animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg" style="background:var(--primary);">
+                        <i class="fas fa-scissors text-white text-xl"></i>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-sm font-bold mb-3 -mt-10 ml-10 relative">3</div>
+                    <h4 class="font-bold text-[var(--text-dark)] mb-2" style="font-family:'Playfair Display',serif;">Crafted with Care</h4>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed">Your garment is expertly stitched or altered by our skilled artisans.</p>
+                </div>
+                <div class="flex flex-col items-center text-center animate-on-scroll slide-up" style="animation-delay:0.4s;">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg" style="background:rgba(201,169,110,1);">
+                        <i class="fas fa-star text-white text-xl"></i>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-[var(--accent)] text-white flex items-center justify-center text-sm font-bold mb-3 -mt-10 ml-10 relative">4</div>
+                    <h4 class="font-bold text-[var(--text-dark)] mb-2" style="font-family:'Playfair Display',serif;">Perfect Fit Delivered</h4>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed">Try on your creation, make final adjustments, and walk away in style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED GALLERY ===== -->
+    <section class="section-py bg-[var(--cream)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in"><i class="fas fa-images text-[10px]"></i> Our Work</div>
+                <h2 class="section-title animate-on-scroll slide-up" style="animation-delay:0.1s;">Craftsmanship <span class="green-text">Showcased</span></h2>
+                <p class="text-[var(--text-muted)] mt-4 max-w-xl mx-auto animate-on-scroll slide-up" style="animation-delay:0.2s;">A glimpse into the artistry and precision that goes into every creation from our studio.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Large feature image -->
+                <div class="lg:col-span-2 rounded-3xl overflow-hidden relative group animate-on-scroll slide-right" style="height:420px;">
+                    <img src="images/measurement-session.jpg" alt="Professional measurement session" class="img-cover w-full h-full transition-transform duration-700 group-hover:scale-105" onerror="this.src='images/measuring.jpg'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[rgba(28,44,38,0.7)] via-transparent to-transparent flex items-end p-8">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-[var(--primary)] text-white text-xs font-bold uppercase tracking-wider mb-2">Featured</span>
+                            <h3 class="text-white text-xl font-bold" style="font-family:'Playfair Display',serif;">Precision Measurement Session</h3>
+                            <p class="text-white/70 text-sm mt-1">Every great garment starts with the perfect fit</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side stacked -->
+                <div class="flex flex-col gap-6">
+                    <div class="rounded-3xl overflow-hidden relative group animate-on-scroll slide-left" style="height:200px;animation-delay:0.1s;">
+                        <img src="images/fabric-collection.jpg" alt="Premium fabric collection" class="img-cover w-full h-full transition-transform duration-700 group-hover:scale-105" onerror="this.src='images/fabric-swatches.jpg'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[rgba(28,44,38,0.6)] to-transparent flex items-end p-5">
+                            <span class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Premium Fabrics</span>
+                        </div>
+                    </div>
+                    <div class="rounded-3xl overflow-hidden relative group animate-on-scroll slide-left" style="height:200px;animation-delay:0.2s;">
+                        <img src="images/formal-suits.jpg" alt="Formal suits collection" class="img-cover w-full h-full transition-transform duration-700 group-hover:scale-105" onerror="this.src='images/wedding-dress.jpg'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[rgba(28,44,38,0.6)] to-transparent flex items-end p-5">
+                            <span class="text-white text-sm font-semibold" style="font-family:'Playfair Display',serif;">Formal Tailoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="gallery.html" class="btn btn-secondary btn-rounded btn-lg" id="view-gallery-btn">View Full Gallery <i class="fas fa-images text-xs"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TURNAROUND TIMES ===== -->
+    <section class="section-py" style="background:var(--secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in"><i class="fas fa-clock text-[10px]"></i> Turnaround Time</div>
+                <h2 class="section-title animate-on-scroll slide-up" style="animation-delay:0.1s;">Ready When <span class="green-text">You Are</span></h2>
+                <p class="text-[var(--text-muted)] mt-4 max-w-xl mx-auto animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    Choose the service tier that matches your timeline. Quality guaranteed at every level.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="turnaround-card animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-leaf text-[var(--primary)] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-2 text-center" style="font-family:'Playfair Display',serif;">Standard</h3>
+                    <div class="text-4xl font-bold text-[var(--primary)] text-center mb-3" style="font-family:'Playfair Display',serif;">5–7 Days</div>
+                    <p class="text-[var(--text-muted)] text-sm text-center mb-5">Perfect for non-urgent stitching and alterations with full attention to detail.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> Custom stitching</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> Major alterations</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> 2 fitting sessions</li>
+                    </ul>
+                </div>
+                <div class="turnaround-card animate-on-scroll slide-up" style="animation-delay:0.2s;border-color:rgba(44,74,62,0.3);">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <span class="px-4 py-1.5 rounded-full bg-[var(--primary)] text-white text-xs font-bold uppercase tracking-wider shadow-lg">Most Chosen</span>
+                    </div>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-bolt text-[var(--primary)] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-2 text-center" style="font-family:'Playfair Display',serif;">Express</h3>
+                    <div class="text-4xl font-bold text-[var(--primary)] text-center mb-3" style="font-family:'Playfair Display',serif;">48 Hours</div>
+                    <p class="text-[var(--text-muted)] text-sm text-center mb-5">For urgent requirements without compromising on quality craftsmanship.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> Priority queue</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> Simple alterations</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> SMS notification</li>
+                    </ul>
+                </div>
+                <div class="turnaround-card animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:rgba(201,169,110,0.12);">
+                        <i class="fas fa-crown text-[var(--accent)] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-2 text-center" style="font-family:'Playfair Display',serif;">Premium</h3>
+                    <div class="text-4xl font-bold text-[var(--accent)] text-center mb-3" style="font-family:'Playfair Display',serif;">14+ Days</div>
+                    <p class="text-[var(--text-muted)] text-sm text-center mb-5">For elaborate bridal wear and complex creations that deserve unhurried perfection.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--accent)] text-xs"></i> Bridal & occasion wear</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--accent)] text-xs"></i> Hand embroidery</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--accent)] text-xs"></i> Unlimited fittings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section-py bg-[var(--cream)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in"><i class="fas fa-star text-[10px]"></i> Testimonials</div>
+                <h2 class="section-title animate-on-scroll slide-up" style="animation-delay:0.1s;">What Our Clients <span class="green-text">Say</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="testimonial-card animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                    </div>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-5 italic">"The bridal lehenga they stitched for my wedding was absolutely stunning. The attention to detail was exceptional. I received so many compliments!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-sm">P</div>
+                        <div>
+                            <div class="font-bold text-[var(--text-dark)] text-sm" style="font-family:'Playfair Display',serif;">Priya Sharma</div>
+                            <div class="text-xs text-[var(--text-muted)]">Bridal Customer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                    </div>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-5 italic">"I needed a suit altered with just 2 days notice. StitchCraft delivered perfectly — on time, the fit was immaculate. Highly recommended!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-sm">R</div>
+                        <div>
+                            <div class="font-bold text-[var(--text-dark)] text-sm" style="font-family:'Playfair Display',serif;">Rajesh Kumar</div>
+                            <div class="text-xs text-[var(--text-muted)]">Business Professional</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--accent)] text-sm"></i>
+                    </div>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-5 italic">"My entire family's ethnic wear for a wedding — all stitched at StitchCraft. Every piece was perfect. They truly understand fabric and fit."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-sm">A</div>
+                        <div>
+                            <div class="font-bold text-[var(--text-dark)] text-sm" style="font-family:'Playfair Display',serif;">Ananya Iyer</div>
+                            <div class="text-xs text-[var(--text-muted)]">Regular Client</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING FORM ===== -->
+    <section class="booking-form-section section-py" id="booking">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-10">
+                    <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);">
+                        <i class="fas fa-calendar-alt text-[10px]"></i> Book Appointment
+                    </div>
+                    <h2 class="section-title text-white animate-on-scroll slide-up" style="animation-delay:0.1s;">Schedule Your <span class="accent-text">Measurement Visit</span></h2>
+                    <p class="text-white/60 mt-4 animate-on-scroll slide-up" style="animation-delay:0.2s;">Fill in the form and our team will confirm your slot within 2 hours.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/15 animate-on-scroll zoom-in" style="animation-delay:0.2s;">
+                    <form id="booking-form" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div class="form-group">
+                            <label class="form-label text-white/80" for="book-fname">First Name</label>
+                            <input type="text" id="book-fname" class="form-input" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:white;" placeholder="Your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-white/80" for="book-lname">Last Name</label>
+                            <input type="text" id="book-lname" class="form-input" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:white;" placeholder="Your last name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-white/80" for="book-phone">Phone Number</label>
+                            <input type="tel" id="book-phone" class="form-input" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:white;" placeholder="+91 98765 43210" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-white/80" for="book-email">Email Address</label>
+                            <input type="email" id="book-email" class="form-input" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:white;" placeholder="you@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-white/80" for="book-service">Service Required</label>
+                            <select id="book-service" class="form-input" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:white;" required>
+                                <option value="" style="color:#333;">Select a service...</option>
+                                <option value="custom" style="color:#333;">Custom Stitching</option>
+                                <option value="alteration" style="color:#333;">Alterations & Repairs</option>
+                                <option value="bridal" style="color:#333;">Bridal Wear</option>
+                                <option value="measurement" style="color:#333;">Measurements Only</option>
+                                <option value="fabric" style="color:#333;">Fabric Selection</option>
+                                <option value="express" style="color:#333;">Express Service</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-white/80" for="book-date">Preferred Date</label>
+                            <input type="date" id="book-date" class="form-input" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:white;color-scheme:dark;" required>
+                        </div>
+                        <div class="form-group sm:col-span-2">
+                            <label class="form-label text-white/80" for="book-msg">Additional Notes</label>
+                            <textarea id="book-msg" class="form-input" rows="3" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:white;resize:none;" placeholder="Describe your requirements, fabric preferences, or any special requests..."></textarea>
+                        </div>
+                        <div class="sm:col-span-2 text-center">
+                            <button type="submit" class="btn btn-accent btn-lg btn-shine btn-rounded" id="submit-booking-btn" style="min-width:200px;">
+                                <i class="fas fa-calendar-check text-sm"></i> Confirm Appointment
+                            </button>
+                        </div>
+                    </form>
+                    <div id="booking-success" class="hidden text-center py-8">
+                        <div class="w-16 h-16 rounded-full bg-[var(--accent)]/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check text-[var(--accent)] text-2xl"></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2" style="font-family:'Playfair Display',serif;">Appointment Requested!</h3>
+                        <p class="text-white/60">We'll confirm your slot via SMS/email within 2 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="py-16 bg-[var(--surface-alt)] dark:bg-[var(--surface-alt)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+            <div class="animate-on-scroll zoom-in">
+                <h2 class="section-title mb-4">Ready to Look Your <span class="green-text">Best?</span></h2>
+                <p class="text-[var(--text-muted)] max-w-xl mx-auto mb-8">Visit our studio in T. Nagar, Chennai or book your measurement appointment online today.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html#booking" class="btn btn-primary btn-lg btn-rounded btn-shine" id="cta-book-btn"><i class="fas fa-calendar-check text-sm"></i> Book Now</a>
+                    <a href="tel:+919876543210" class="btn btn-secondary btn-lg btn-rounded" id="cta-call-btn"><i class="fas fa-phone text-sm"></i> Call +91 98765 43210</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

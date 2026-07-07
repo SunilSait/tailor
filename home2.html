@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StitchCraft Premium — Luxury tailoring experience with curated fabrics, master craftspeople, and bespoke garments. Elevate your wardrobe in Chennai.">
+    <title>Home 2 – Premium | StitchCraft Tailor</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='50' cy='50' r='46' stroke='%232C4A3E' stroke-width='2' stroke-opacity='0.4' fill='none'/%3E%3Ccircle cx='34' cy='34' r='9' stroke='%232C4A3E' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='66' cy='34' r='9' stroke='%232C4A3E' stroke-width='2.5' fill='none'/%3E%3Cline x1='40' y1='40' x2='70' y2='75' stroke='%232C4A3E' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='60' y1='40' x2='30' y2='75' stroke='%232C4A3E' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='50' r='3.5' fill='%232C4A3E'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2C4A3E', secondary: '#F5F0E8' } } } }</script>
+    <style>
+        @keyframes fabricMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .fabric-bg {
+            background: linear-gradient(135deg, #1A2E28 0%, #2C4A3E 25%, #1A2E28 50%, #3D6B5C 75%, #1A2E28 100%);
+            background-size: 400% 400%;
+            animation: fabricMove 12s ease infinite;
+        }
+        /* Mobile-friendly service card interaction */
+        .svc-card-wrap .svc-card-overlay {
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        @media (hover: hover) {
+            .svc-card-wrap:hover .svc-card-overlay { opacity: 1; }
+        }
+        @media (hover: none) {
+            .svc-card-wrap:active .svc-card-overlay { opacity: 1; }
+        }
+        .svc-card-wrap.tapped .svc-card-overlay { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- ===== HERO — Fullscreen centered ===== -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden fabric-bg">
+        <!-- Fabric texture overlay -->
+        <div class="absolute inset-0 pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:40px 40px;"></div>
+        <!-- Radial glow center -->
+        <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%, rgba(201,169,110,0.12) 0%, transparent 60%);"></div>
+
+        <!-- Floating orbs -->
+        <div class="absolute top-16 left-[8%] w-64 h-64 rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(44,74,62,0.4) 0%,transparent 70%);animation:float 8s ease-in-out infinite;"></div>
+        <div class="absolute bottom-20 right-[8%] w-48 h-48 rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(201,169,110,0.15) 0%,transparent 70%);animation:float 10s ease-in-out infinite 2s;"></div>
+
+        <!-- Decorative circles -->
+        <div class="absolute top-24 right-[12%] opacity-20" style="animation:float 7s ease-in-out infinite 1s;">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                <circle cx="60" cy="60" r="55" stroke="#C9A96E" stroke-width="1" stroke-dasharray="8 5"/>
+                <circle cx="60" cy="60" r="40" stroke="#C9A96E" stroke-width="0.5" fill="none"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-28 left-[10%] opacity-15" style="animation:float 6s ease-in-out infinite 3s;">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <path d="M40 8 L62 25 L62 55 L40 72 L18 55 L18 25 Z" stroke="#C9A96E" stroke-width="1.5" fill="rgba(201,169,110,0.06)"/>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center py-32">
+            <!-- Premium badge -->
+            <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[rgba(201,169,110,0.35)] bg-[rgba(201,169,110,0.08)] mb-8 animate-on-scroll fade-in">
+                <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" style="animation:orbitPulse 2s ease infinite;"></span>
+                <span class="text-[var(--accent)] text-xs font-bold uppercase tracking-[0.25em]">Premium Tailoring Experience</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" style="animation:orbitPulse 2s ease infinite 0.5s;"></span>
+            </div>
+
+            <h1 class="font-bold text-white leading-tight mb-6 animate-on-scroll slide-up" style="font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,5.5rem);animation-delay:0.1s;">
+                Crafted for the<br>
+                <span style="background:linear-gradient(135deg,#C9A96E 0%,#F2D98A 40%,#C9A96E 70%,#9E7D46 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite;">Discerning</span>
+                <br>Few
+            </h1>
+
+            <p class="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto mb-10 animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                Bespoke tailoring, curated fabrics, and exquisite craftsmanship — where every detail is an act of devotion to perfection.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                <a href="contact.html#booking" class="btn btn-accent btn-lg btn-shine btn-rounded" id="hero2-book-btn">
+                    <i class="fas fa-calendar-check text-sm"></i> Book a Consultation
+                </a>
+                <a href="gallery.html" class="btn btn-lg btn-rounded" style="border:1.5px solid rgba(201,169,110,0.4);color:#C9A96E;background:transparent;" id="hero2-gallery-btn">
+                    Explore Gallery <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="mt-16 flex flex-col items-center gap-2 opacity-40 animate-on-scroll fade-in" style="animation-delay:0.6s;">
+                <span class="text-white text-xs uppercase tracking-widest">Scroll to Explore</span>
+                <div class="w-px h-12 bg-gradient-to-b from-white to-transparent" style="animation:float 2s ease-in-out infinite;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS BAR ===== -->
+    <section class="py-8 bg-[var(--surface-alt)] dark:bg-[var(--surface-alt)] border-y border-[var(--border-light)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="animate-on-scroll fade-in">
+                    <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="18" data-suffix="+">18+</div>
+                    <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Years of Expertise</div>
+                </div>
+                <div class="animate-on-scroll fade-in" data-delay="100">
+                    <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="5000" data-suffix="+">5000+</div>
+                    <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Happy Clients</div>
+                </div>
+                <div class="animate-on-scroll fade-in" data-delay="200">
+                    <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="200" data-suffix="+">200+</div>
+                    <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Fabric Options</div>
+                </div>
+                <div class="animate-on-scroll fade-in" data-delay="300">
+                    <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="4.9" data-suffix="★">4.9★</div>
+                    <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Client Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES GRID — Image hover reveal ===== -->
+    <section class="section-py bg-[var(--cream)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in"><i class="fas fa-concierge-bell text-[10px]"></i> Services</div>
+                <h2 class="section-title animate-on-scroll slide-up" style="animation-delay:0.1s;">A Complete <span class="green-text">Tailoring</span> Studio</h2>
+                <p class="text-[var(--text-muted)] mt-4 max-w-xl mx-auto animate-on-scroll slide-up" style="animation-delay:0.2s;">Six specialties, one trusted studio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="svc-card-wrap relative rounded-3xl overflow-hidden cursor-pointer animate-on-scroll zoom-in h-72" style="animation-delay:0.1s;">
+                    <img src="images/hero-tailor.jpg" alt="Custom Stitching" class="img-cover w-full h-full" onerror="this.src='images/hero.jpg'">
+                    <div class="svc-card-overlay absolute inset-0 flex flex-col justify-end p-7" style="background:linear-gradient(to top, rgba(28,44,38,0.92) 0%, rgba(28,44,38,0.4) 50%, transparent 100%);">
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);">
+                            <i class="fas fa-cut text-white text-base"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-1" style="font-family:'Playfair Display',serif;">Custom Stitching</h3>
+                        <p class="text-white/60 text-sm">Bespoke garments tailored to your exact measurements and style.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="svc-card-wrap relative rounded-3xl overflow-hidden cursor-pointer animate-on-scroll zoom-in h-72" style="animation-delay:0.15s;">
+                    <img src="images/alteration-work.jpg" alt="Alterations" class="img-cover w-full h-full" onerror="this.src='images/alteration-work.jpg'">
+                    <div class="svc-card-overlay absolute inset-0 flex flex-col justify-end p-7" style="background:linear-gradient(to top, rgba(28,44,38,0.92) 0%, rgba(28,44,38,0.4) 50%, transparent 100%);">
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);">
+                            <i class="fas fa-ruler-combined text-white text-base"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-1" style="font-family:'Playfair Display',serif;">Alterations</h3>
+                        <p class="text-white/60 text-sm">Precise repairs and restyling for a perfect fit.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="svc-card-wrap relative rounded-3xl overflow-hidden cursor-pointer animate-on-scroll zoom-in h-72" style="animation-delay:0.2s;">
+                    <img src="images/bridal-wear.jpg" alt="Bridal Wear" class="img-cover w-full h-full" onerror="this.src='images/wedding-dress.jpg'">
+                    <div class="svc-card-overlay absolute inset-0 flex flex-col justify-end p-7" style="background:linear-gradient(to top, rgba(28,44,38,0.92) 0%, rgba(28,44,38,0.4) 50%, transparent 100%);">
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);">
+                            <i class="fas fa-ring text-white text-base"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-1" style="font-family:'Playfair Display',serif;">Bridal Wear</h3>
+                        <p class="text-white/60 text-sm">Exquisite bridal creations for your most special moments.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="svc-card-wrap relative rounded-3xl overflow-hidden cursor-pointer animate-on-scroll zoom-in h-72" style="animation-delay:0.25s;">
+                    <img src="images/measurement-session.jpg" alt="Measurements" class="img-cover w-full h-full" onerror="this.src='images/measuring.jpg'">
+                    <div class="svc-card-overlay absolute inset-0 flex flex-col justify-end p-7" style="background:linear-gradient(to top, rgba(28,44,38,0.92) 0%, rgba(28,44,38,0.4) 50%, transparent 100%);">
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);">
+                            <i class="fas fa-tape text-white text-base"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-1" style="font-family:'Playfair Display',serif;">Measurements</h3>
+                        <p class="text-white/60 text-sm">Professional 25-point measurement sessions for perfect fits.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="svc-card-wrap relative rounded-3xl overflow-hidden cursor-pointer animate-on-scroll zoom-in h-72" style="animation-delay:0.3s;">
+                    <img src="images/fabric-collection.jpg" alt="Fabric Selection" class="img-cover w-full h-full" onerror="this.src='images/fabric-swatches.jpg'">
+                    <div class="svc-card-overlay absolute inset-0 flex flex-col justify-end p-7" style="background:linear-gradient(to top, rgba(28,44,38,0.92) 0%, rgba(28,44,38,0.4) 50%, transparent 100%);">
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);">
+                            <i class="fas fa-tshirt text-white text-base"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-1" style="font-family:'Playfair Display',serif;">Fabric Selection</h3>
+                        <p class="text-white/60 text-sm">200+ premium fabrics curated by our expert stylists.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="svc-card-wrap relative rounded-3xl overflow-hidden cursor-pointer animate-on-scroll zoom-in h-72" style="animation-delay:0.35s;">
+                    <img src="images/formal-suits.jpg" alt="Formal Wear" class="img-cover w-full h-full" onerror="this.src='images/shop-interior.jpg'">
+                    <div class="svc-card-overlay absolute inset-0 flex flex-col justify-end p-7" style="background:linear-gradient(to top, rgba(28,44,38,0.92) 0%, rgba(28,44,38,0.4) 50%, transparent 100%);">
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);">
+                            <i class="fas fa-user-tie text-white text-base"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-1" style="font-family:'Playfair Display',serif;">Formal Wear</h3>
+                        <p class="text-white/60 text-sm">Impeccably tailored suits and formal garments for every occasion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT — Premium Split ===== -->
+    <section class="section-py" style="background:var(--secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-14 items-center">
+                <div class="animate-on-scroll slide-right">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl" style="height:500px;">
+                        <img src="images/about-shop.jpg" alt="Our Studio" class="img-cover w-full h-full" onerror="this.src='images/shop-interior.jpg'">
+                        <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(28,44,38,0.3) 0%, transparent 50%);"></div>
+                        <!-- Floating stat inside image -->
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="flex gap-3">
+                                <div class="flex-1 bg-white/15 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20">
+                                    <div class="text-2xl font-bold text-white" style="font-family:'Playfair Display',serif;">2005</div>
+                                    <div class="text-xs text-white/60 uppercase tracking-wider">Founded</div>
+                                </div>
+                                <div class="flex-1 bg-white/15 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20">
+                                    <div class="text-2xl font-bold text-white" style="font-family:'Playfair Display',serif;">12</div>
+                                    <div class="text-xs text-white/60 uppercase tracking-wider">Expert Tailors</div>
+                                </div>
+                                <div class="flex-1 bg-white/15 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20">
+                                    <div class="text-2xl font-bold text-white" style="font-family:'Playfair Display',serif;">3</div>
+                                    <div class="text-xs text-white/60 uppercase tracking-wider">Locations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-on-scroll slide-left" style="animation-delay:0.1s;">
+                    <div class="section-tag mb-5"><i class="fas fa-award text-[10px]"></i> Our Heritage</div>
+                    <h2 class="section-title mb-6">Two Decades of <span class="green-text">Crafted Excellence</span></h2>
+                    <p class="text-[var(--text-muted)] leading-relaxed mb-5">Founded in 2005 in the heart of Chennai's T. Nagar, StitchCraft was born from a simple belief: that every person deserves garments that fit them perfectly and make them feel extraordinary.</p>
+                    <p class="text-[var(--text-muted)] leading-relaxed mb-8">Today, our team of 12 master tailors blends traditional techniques with contemporary design sensibilities, serving thousands of clients across Chennai and beyond.</p>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(44,74,62,0.1);">
+                                <i class="fas fa-award text-[var(--primary)] text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[var(--text-dark)] text-sm">Award Winning</div>
+                                <div class="text-xs text-[var(--text-muted)]">Best Tailor, Chennai 2023</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(44,74,62,0.1);">
+                                <i class="fas fa-leaf text-[var(--primary)] text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[var(--text-dark)] text-sm">Eco-Friendly</div>
+                                <div class="text-xs text-[var(--text-muted)]">Zero-waste fabric practice</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(44,74,62,0.1);">
+                                <i class="fas fa-shield-alt text-[var(--primary)] text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[var(--text-dark)] text-sm">Quality Assured</div>
+                                <div class="text-xs text-[var(--text-muted)]">100% satisfaction guarantee</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(44,74,62,0.1);">
+                                <i class="fas fa-clock text-[var(--primary)] text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[var(--text-dark)] text-sm">On Time</div>
+                                <div class="text-xs text-[var(--text-muted)]">98% on-time delivery rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="about.html" class="btn btn-primary btn-rounded btn-shine" id="about-learn-btn">Learn Our Story <i class="fas fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEAM ===== -->
+    <section class="section-py bg-[var(--cream)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in"><i class="fas fa-users text-[10px]"></i> Our Team</div>
+                <h2 class="section-title animate-on-scroll slide-up" style="animation-delay:0.1s;">Meet Our <span class="green-text">Master Tailors</span></h2>
+                <p class="text-[var(--text-muted)] mt-4 max-w-xl mx-auto animate-on-scroll slide-up" style="animation-delay:0.2s;">Skilled artisans with decades of combined experience in every garment type.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-5 border-4 border-[rgba(44,74,62,0.15)]" style="box-shadow:0 4px 20px rgba(44,74,62,0.15);">
+                        <img src="images/team.jpg" alt="Rajan Pillai" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Rajan Pillai</h3>
+                    <p class="text-[var(--primary)] text-sm font-semibold mb-3">Master Tailor & Founder</p>
+                    <p class="text-[var(--text-muted)] text-sm">30+ years of expertise in custom suits, ethnic wear, and bespoke garments. Trained in traditional South Indian tailoring.</p>
+                </div>
+                <div class="text-center animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-5 border-4 border-[rgba(44,74,62,0.15)]" style="box-shadow:0 4px 20px rgba(44,74,62,0.15);">
+                        <img src="images/team.jpg" alt="Meera Krishnan" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Meera Krishnan</h3>
+                    <p class="text-[var(--primary)] text-sm font-semibold mb-3">Bridal Specialist</p>
+                    <p class="text-[var(--text-muted)] text-sm">Expert in bridal couture, lehengas, and occasion wear with a flair for intricate embroidery and embellishments.</p>
+                </div>
+                <div class="text-center animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                    <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-5 border-4 border-[rgba(44,74,62,0.15)]" style="box-shadow:0 4px 20px rgba(44,74,62,0.15);">
+                        <img src="images/team.jpg" alt="Suresh Babu" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Suresh Babu</h3>
+                    <p class="text-[var(--primary)] text-sm font-semibold mb-3">Alterations Expert</p>
+                    <p class="text-[var(--text-muted)] text-sm">15 years specializing in alterations and repairs, known for invisible mending and perfect hem work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING ===== -->
+    <section class="section-py" style="background:var(--secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-14 items-start">
+                <!-- Left: Info -->
+                <div class="animate-on-scroll slide-right">
+                    <div class="section-tag mb-5"><i class="fas fa-calendar-alt text-[10px]"></i> Appointments</div>
+                    <h2 class="section-title mb-6">Book Your <span class="green-text">Studio Visit</span></h2>
+                    <p class="text-[var(--text-muted)] leading-relaxed mb-8">Schedule a personalized consultation with one of our expert tailors. We'll take your measurements, discuss your vision, and guide you through our fabric collection.</p>
+
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0" style="background:rgba(44,74,62,0.1);">
+                                <i class="fas fa-map-pin text-[var(--primary)]"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Studio Location</div>
+                                <p class="text-sm text-[var(--text-muted)]">12 Fabric Lane, T. Nagar<br>Chennai – 600017, Tamil Nadu</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0" style="background:rgba(44,74,62,0.1);">
+                                <i class="fas fa-clock text-[var(--primary)]"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Studio Hours</div>
+                                <p class="text-sm text-[var(--text-muted)]">Mon – Sat: 9:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 6:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0" style="background:rgba(44,74,62,0.1);">
+                                <i class="fas fa-phone text-[var(--primary)]"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Quick Contact</div>
+                                <p class="text-sm text-[var(--text-muted)]">+91 98765 43210<br>hello@stitchcraft.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Booking form -->
+                <div class="bg-[var(--surface)] rounded-3xl p-8 border border-[var(--border-light)] shadow-lg animate-on-scroll slide-left dark:bg-[var(--surface-alt)]" style="animation-delay:0.1s;">
+                    <h3 class="text-xl font-bold text-[var(--text-dark)] mb-6" style="font-family:'Playfair Display',serif;">Schedule Your Visit</h3>
+                    <form id="booking-form" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="form-group">
+                                <label class="form-label" for="h2-fname">First Name</label>
+                                <input type="text" id="h2-fname" class="form-input" placeholder="First" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="h2-lname">Last Name</label>
+                                <input type="text" id="h2-lname" class="form-input" placeholder="Last" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="h2-phone">Phone Number</label>
+                            <input type="tel" id="h2-phone" class="form-input" placeholder="+91 98765 43210" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="h2-service">Service</label>
+                            <select id="h2-service" class="form-input" required>
+                                <option value="">Select a service...</option>
+                                <option>Custom Stitching</option>
+                                <option>Alterations & Repairs</option>
+                                <option>Bridal Wear</option>
+                                <option>Measurements Only</option>
+                                <option>Express Service</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="h2-date">Preferred Date</label>
+                            <input type="date" id="h2-date" class="form-input" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full btn-rounded btn-shine" id="h2-submit-btn">
+                            <i class="fas fa-calendar-check text-sm"></i> Request Appointment
+                        </button>
+                    </form>
+                    <div id="booking-success" class="hidden text-center py-6">
+                        <i class="fas fa-check-circle text-[var(--primary)] text-4xl mb-3 block"></i>
+                        <p class="font-bold text-[var(--text-dark)]" style="font-family:'Playfair Display',serif;">Appointment Requested!</p>
+                        <p class="text-sm text-[var(--text-muted)] mt-1">We'll confirm within 2 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section-py bg-[var(--cream)]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in"><i class="fas fa-question-circle text-[10px]"></i> FAQ</div>
+                <h2 class="section-title animate-on-scroll slide-up" style="animation-delay:0.1s;">Common <span class="green-text">Questions</span></h2>
+            </div>
+            <div class="space-y-3">
+                <div class="faq-item animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    <button class="faq-btn">
+                        How long does custom stitching take?
+                        <div class="faq-icon"><i class="fas fa-chevron-down text-xs"></i></div>
+                    </button>
+                    <div class="faq-body">Standard custom stitching takes 5–7 business days. For bridal wear and complex designs, we recommend 14+ days for the finest results. Express 48-hour service is available for simple pieces.</div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up" style="animation-delay:0.15s;">
+                    <button class="faq-btn">
+                        Do I need to bring my own fabric?
+                        <div class="faq-icon"><i class="fas fa-chevron-down text-xs"></i></div>
+                    </button>
+                    <div class="faq-body">Not at all! We carry 200+ premium fabrics in-store. However, you're welcome to bring your own fabric if you have something specific in mind. Our tailors will advise on the best options for your design.</div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    <button class="faq-btn">
+                        How many fitting sessions are included?
+                        <div class="faq-icon"><i class="fas fa-chevron-down text-xs"></i></div>
+                    </button>
+                    <div class="faq-body">Standard orders include 2 fitting sessions. Premium bridal orders include unlimited fittings until you're 100% satisfied. Additional sessions can be arranged for any order.</div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up" style="animation-delay:0.25s;">
+                    <button class="faq-btn">
+                        Can I get alterations on branded clothing?
+                        <div class="faq-icon"><i class="fas fa-chevron-down text-xs"></i></div>
+                    </button>
+                    <div class="faq-body">Yes! We alter all types of clothing regardless of brand. Our experts handle everything from high-street to luxury brands with the same care and precision.</div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                    <button class="faq-btn">
+                        Do you offer home pickup and delivery?
+                        <div class="faq-icon"><i class="fas fa-chevron-down text-xs"></i></div>
+                    </button>
+                    <div class="faq-body">Yes! We offer convenient doorstep pickup and delivery within Chennai for orders above ₹500. Contact us to schedule a home visit.</div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up" style="animation-delay:0.35s;">
+                    <button class="faq-btn">
+                        What payment methods do you accept?
+                        <div class="faq-icon"><i class="fas fa-chevron-down text-xs"></i></div>
+                    </button>
+                    <div class="faq-body">We accept cash, UPI (GPay, PhonePe, Paytm), all major credit/debit cards, and net banking. For large orders, we can arrange installment payments.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SCROLLING TESTIMONIALS ===== -->
+    <section class="py-12 overflow-hidden" style="background:var(--secondary);">
+        <div class="text-center mb-10">
+            <div class="section-tag mx-auto mb-3"><i class="fas fa-star text-[10px]"></i> Reviews</div>
+            <h2 class="section-title animate-on-scroll slide-up">Loved by <span class="green-text">Thousands</span></h2>
+        </div>
+        <div style="overflow:hidden;">
+            <div class="marquee-track">
+                <!-- Testimonials repeat for seamless loop -->
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Absolutely breathtaking bridal lehenga. The embroidery was flawless!"</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Priya S.</span>
+                </div>
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Express alteration done in 24 hours. Perfect fit, incredibly professional."</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Rajesh K.</span>
+                </div>
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"The whole family's ethnic wear — every piece was a masterpiece."</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Ananya I.</span>
+                </div>
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"My corporate suit fits like a dream. Outstanding quality and attention to detail."</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Vikram M.</span>
+                </div>
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Been coming here for 10 years. Never disappointed. Best tailor in Chennai."</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Lakshmi P.</span>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Absolutely breathtaking bridal lehenga. The embroidery was flawless!"</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Priya S.</span>
+                </div>
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Express alteration done in 24 hours. Perfect fit, incredibly professional."</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Rajesh K.</span>
+                </div>
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"The whole family's ethnic wear — every piece was a masterpiece."</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Ananya I.</span>
+                </div>
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"My corporate suit fits like a dream. Outstanding quality and attention to detail."</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Vikram M.</span>
+                </div>
+                <div class="testimonial-card shrink-0" style="width:320px;">
+                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
+                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Been coming here for 10 years. Never disappointed. Best tailor in Chennai."</p>
+                    <span class="text-xs font-bold text-[var(--text-dark)]">Lakshmi P.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // Mobile tap interaction for service cards
+    document.querySelectorAll('.svc-card-wrap').forEach(card => {
+        card.addEventListener('click', () => {
+            document.querySelectorAll('.svc-card-wrap').forEach(c => c.classList.remove('tapped'));
+            card.classList.toggle('tapped');
+        });
+    });
+    </script>
+</body>
+
+</html>
