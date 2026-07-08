@@ -41,11 +41,11 @@
     <div id="navbar-container"></div>
 
     <!-- ===== HERO — Fullscreen centered ===== -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden fabric-bg">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(rgba(28,46,40,0.88), rgba(28,46,40,0.88)), url('images/premium_hero_banner.png') center/cover no-repeat;">
         <!-- Fabric texture overlay -->
-        <div class="absolute inset-0 pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:40px 40px;"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:48px 48px;"></div>
         <!-- Radial glow center -->
-        <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%, rgba(201,169,110,0.12) 0%, transparent 60%);"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%, rgba(201,169,110,0.08) 0%, transparent 60%);"></div>
 
         <!-- Floating orbs -->
         <div class="absolute top-16 left-[8%] w-64 h-64 rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(44,74,62,0.4) 0%,transparent 70%);animation:float 8s ease-in-out infinite;"></div>
@@ -292,7 +292,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="text-center animate-on-scroll slide-up" style="animation-delay:0.1s;">
                     <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-5 border-4 border-[rgba(44,74,62,0.15)]" style="box-shadow:0 4px 20px rgba(44,74,62,0.15);">
-                        <img src="images/team.jpg" alt="Rajan Pillai" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
+                        <img src="images/rajan_pillai.png" alt="Rajan Pillai" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
                     </div>
                     <h3 class="text-xl font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Rajan Pillai</h3>
                     <p class="text-[var(--primary)] text-sm font-semibold mb-3">Master Tailor & Founder</p>
@@ -300,7 +300,7 @@
                 </div>
                 <div class="text-center animate-on-scroll slide-up" style="animation-delay:0.2s;">
                     <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-5 border-4 border-[rgba(44,74,62,0.15)]" style="box-shadow:0 4px 20px rgba(44,74,62,0.15);">
-                        <img src="images/team.jpg" alt="Meera Krishnan" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
+                        <img src="images/meera_krishnan.png" alt="Meera Krishnan" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
                     </div>
                     <h3 class="text-xl font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Meera Krishnan</h3>
                     <p class="text-[var(--primary)] text-sm font-semibold mb-3">Bridal Specialist</p>
@@ -308,7 +308,7 @@
                 </div>
                 <div class="text-center animate-on-scroll slide-up" style="animation-delay:0.3s;">
                     <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-5 border-4 border-[rgba(44,74,62,0.15)]" style="box-shadow:0 4px 20px rgba(44,74,62,0.15);">
-                        <img src="images/team.jpg" alt="Suresh Babu" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
+                        <img src="images/suresh_babu.png" alt="Suresh Babu" class="img-cover w-full h-full" onerror="this.src='images/team.jpg'">
                     </div>
                     <h3 class="text-xl font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">Suresh Babu</h3>
                     <p class="text-[var(--primary)] text-sm font-semibold mb-3">Alterations Expert</p>
@@ -459,65 +459,75 @@
         </div>
     </section>
 
-    <!-- ===== SCROLLING TESTIMONIALS ===== -->
-    <section class="py-12 overflow-hidden" style="background:var(--secondary);">
-        <div class="text-center mb-10">
-            <div class="section-tag mx-auto mb-3"><i class="fas fa-star text-[10px]"></i> Reviews</div>
-            <h2 class="section-title animate-on-scroll slide-up">Loved by <span class="green-text">Thousands</span></h2>
-        </div>
-        <div style="overflow:hidden;">
-            <div class="marquee-track">
-                <!-- Testimonials repeat for seamless loop -->
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Absolutely breathtaking bridal lehenga. The embroidery was flawless!"</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Priya S.</span>
+    <!-- ===== TESTIMONIALS — Fixed Grid with Profile Pictures ===== -->
+    <section class="section-py" style="background:var(--secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <div class="section-tag mx-auto mb-4 animate-on-scroll fade-in">
+                    <i class="fas fa-star text-[10px]"></i> Testimonials
                 </div>
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Express alteration done in 24 hours. Perfect fit, incredibly professional."</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Rajesh K.</span>
+                <h2 class="section-title animate-on-scroll slide-up">Loved by <span class="green-text">Thousands</span></h2>
+                <p class="text-[var(--text-muted)] mt-4 max-w-xl mx-auto animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    Hear from our clients who experience our bespoke tailoring and alterations in Chennai.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card animate-on-scroll slide-up" style="animation-delay:0.1s;">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                    </div>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-6 italic">"Absolutely breathtaking bridal lehenga. The embroidery was flawless and exactly how I envisioned it!"</p>
+                    <div class="flex items-center gap-3">
+                        <img src="images/avatar_priya.png" alt="Priya S." class="w-10 h-10 rounded-full object-cover border-2 border-[var(--primary-200)]" onerror="this.src='images/team.jpg'">
+                        <div>
+                            <div class="font-bold text-[var(--text-dark)] text-sm" style="font-family:'Playfair Display',serif;">Priya S.</div>
+                            <div class="text-xs text-[var(--text-muted)]">Bridal Client</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"The whole family's ethnic wear — every piece was a masterpiece."</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Ananya I.</span>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card animate-on-scroll slide-up" style="animation-delay:0.2s;">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                    </div>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-6 italic">"Express alteration done in 24 hours. Perfect fit, incredibly professional service when I needed it most."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="images/avatar_rajesh.png" alt="Rajesh K." class="w-10 h-10 rounded-full object-cover border-2 border-[var(--primary-200)]" onerror="this.src='images/team.jpg'">
+                        <div>
+                            <div class="font-bold text-[var(--text-dark)] text-sm" style="font-family:'Playfair Display',serif;">Rajesh K.</div>
+                            <div class="text-xs text-[var(--text-muted)]">Express Alterations</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"My corporate suit fits like a dream. Outstanding quality and attention to detail."</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Vikram M.</span>
-                </div>
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Been coming here for 10 years. Never disappointed. Best tailor in Chennai."</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Lakshmi P.</span>
-                </div>
-                <!-- Duplicate for seamless loop -->
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Absolutely breathtaking bridal lehenga. The embroidery was flawless!"</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Priya S.</span>
-                </div>
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Express alteration done in 24 hours. Perfect fit, incredibly professional."</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Rajesh K.</span>
-                </div>
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"The whole family's ethnic wear — every piece was a masterpiece."</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Ananya I.</span>
-                </div>
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"My corporate suit fits like a dream. Outstanding quality and attention to detail."</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Vikram M.</span>
-                </div>
-                <div class="testimonial-card shrink-0" style="width:320px;">
-                    <div class="flex gap-1 mb-3"><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i><i class="fas fa-star text-[var(--accent)] text-xs"></i></div>
-                    <p class="text-[var(--text-muted)] text-sm italic mb-4">"Been coming here for 10 years. Never disappointed. Best tailor in Chennai."</p>
-                    <span class="text-xs font-bold text-[var(--text-dark)]">Lakshmi P.</span>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card animate-on-scroll slide-up" style="animation-delay:0.3s;">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                        <i class="fas fa-star text-[var(--primary)] text-sm"></i>
+                    </div>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-6 italic">"My corporate suit fits like a dream. Outstanding fabric quality and extreme attention to details."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="images/avatar_vikram.png" alt="Vikram M." class="w-10 h-10 rounded-full object-cover border-2 border-[var(--primary-200)]" onerror="this.src='images/team.jpg'">
+                        <div>
+                            <div class="font-bold text-[var(--text-dark)] text-sm" style="font-family:'Playfair Display',serif;">Vikram M.</div>
+                            <div class="text-xs text-[var(--text-muted)]">Bespoke Suit Client</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

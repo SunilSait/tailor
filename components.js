@@ -81,7 +81,7 @@
                     <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
                         ${LOGO_SVG}
                         <div class="leading-tight">
-                            <span class="font-bold text-xl block text-[var(--text-dark)] group-hover:text-[var(--primary)] transition-colors" style="font-family:'Playfair Display',serif;line-height:1.1;">
+                            <span class="font-bold text-xl block text-[var(--text-dark)] group-hover:text-[var(--primary)] dark:group-hover:text-[var(--accent)] transition-colors" style="font-family:'Playfair Display',serif;line-height:1.1;">
                                 ${BRAND_NAME}
                             </span>
                             <span class="text-[10px] text-[var(--text-muted)] uppercase tracking-widest font-medium hidden sm:block">Expert Tailoring</span>
@@ -169,7 +169,7 @@
                         <a href="index.html" class="flex items-center gap-2.5 group">
                             ${LOGO_SVG}
                             <div>
-                                <span class="font-bold text-xl block text-[var(--text-dark)] group-hover:text-[var(--primary)] transition-colors" style="font-family:'Playfair Display',serif;">${BRAND_NAME}</span>
+                                <span class="font-bold text-xl block text-[var(--text-dark)] group-hover:text-[var(--primary)] dark:group-hover:text-[var(--accent)] transition-colors" style="font-family:'Playfair Display',serif;">${BRAND_NAME}</span>
                                 <span class="text-[10px] text-[var(--text-muted)] uppercase tracking-widest">Expert Tailoring</span>
                             </div>
                         </a>

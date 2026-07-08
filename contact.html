@@ -139,24 +139,11 @@
     </div>
 </section>
 
-<!-- Map Placeholder -->
+<!-- Live Map Section -->
 <section class="pb-16 bg-[var(--cream)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="rounded-3xl overflow-hidden border border-[var(--border-light)] shadow-sm" style="height:320px;background:linear-gradient(135deg, rgba(44,74,62,0.08) 0%, rgba(44,74,62,0.04) 100%);">
-            <div class="w-full h-full flex flex-col items-center justify-center gap-4 relative">
-                <!-- Decorative map-like grid -->
-                <div class="absolute inset-0" style="background-image:linear-gradient(rgba(44,74,62,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(44,74,62,0.06) 1px,transparent 1px);background-size:40px 40px;"></div>
-                <div class="relative z-10 text-center">
-                    <div class="w-16 h-16 rounded-full bg-[var(--primary)] flex items-center justify-center mx-auto mb-4 shadow-xl" style="animation:float 3s ease-in-out infinite;">
-                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="font-bold text-[var(--text-dark)] mb-1" style="font-family:'Playfair Display',serif;">StitchCraft Studio</h3>
-                    <p class="text-[var(--text-muted)] text-sm">12 Fabric Lane, T. Nagar, Chennai – 600017</p>
-                    <a href="https://maps.google.com" target="_blank" class="mt-4 btn btn-primary btn-rounded inline-flex" style="padding:8px 20px;font-size:0.8rem;" id="maps-btn">
-                        <i class="fas fa-directions text-xs"></i> Get Directions
-                    </a>
-                </div>
-            </div>
+        <div class="rounded-3xl overflow-hidden border border-[var(--border-light)] shadow-sm" style="height:400px;">
+            <iframe class="live-map-iframe w-full h-full" src="https://maps.google.com/maps?q=12%20Fabric%20Lane,%20T.%20Nagar,%20Chennai%20600017&t=&z=15&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>

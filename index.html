@@ -43,10 +43,10 @@
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
                 <!-- Left Content -->
                 <div class="text-center xl:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(44,74,62,0.2)] bg-[rgba(44,74,62,0.06)] mb-6 animate-on-scroll fade-in">
-                        <span class="w-2 h-2 rounded-full bg-[var(--primary)]" style="animation:orbitPulse 2s ease infinite;"></span>
-                        <span class="text-[var(--primary)] text-xs font-bold uppercase tracking-[0.18em]">Premium Tailoring Studio</span>
-                        <span class="w-2 h-2 rounded-full bg-[var(--primary)]" style="animation:orbitPulse 2s ease infinite 0.5s;"></span>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(44,74,62,0.2)] dark:border-[rgba(201,169,110,0.35)] bg-[rgba(44,74,62,0.06)] dark:bg-[rgba(201,169,110,0.08)] mb-6 animate-on-scroll fade-in">
+                        <span class="w-2 h-2 rounded-full bg-[var(--primary)] dark:bg-[var(--accent)]" style="animation:orbitPulse 2s ease infinite;"></span>
+                        <span class="text-[var(--primary)] dark:text-[var(--accent)] text-xs font-bold uppercase tracking-[0.18em]">Premium Tailoring Studio</span>
+                        <span class="w-2 h-2 rounded-full bg-[var(--primary)] dark:bg-[var(--accent)]" style="animation:orbitPulse 2s ease infinite 0.5s;"></span>
                     </div>
 
                     <h1 class="font-bold leading-tight mb-6 animate-on-scroll slide-up text-[var(--text-dark)]" style="font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4rem);animation-delay:0.1s;">
@@ -70,15 +70,15 @@
                     <!-- Stats row -->
                     <div class="grid grid-cols-3 gap-6 mt-14 pt-10 border-t border-[var(--border-light)] animate-on-scroll slide-up" style="animation-delay:0.4s;">
                         <div class="text-center xl:text-left">
-                            <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="18" data-suffix="+ Yrs">18+ Yrs</div>
+                            <div class="text-3xl font-bold text-[var(--primary)] dark:text-[var(--accent)]" style="font-family:'Playfair Display',serif;" data-counter data-target="18" data-suffix="+ Yrs">18+ Yrs</div>
                             <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Experience</div>
                         </div>
                         <div class="text-center xl:text-left">
-                            <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="5000" data-suffix="+">5000+</div>
+                            <div class="text-3xl font-bold text-[var(--primary)] dark:text-[var(--accent)]" style="font-family:'Playfair Display',serif;" data-counter data-target="5000" data-suffix="+">5000+</div>
                             <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Happy Clients</div>
                         </div>
                         <div class="text-center xl:text-left">
-                            <div class="text-3xl font-bold text-[var(--primary)]" style="font-family:'Playfair Display',serif;" data-counter data-target="4.9" data-suffix="★">4.9★</div>
+                            <div class="text-3xl font-bold text-[var(--primary)] dark:text-[var(--accent)]" style="font-family:'Playfair Display',serif;" data-counter data-target="4.9" data-suffix="★">4.9★</div>
                             <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mt-1">Rating</div>
                         </div>
                     </div>
@@ -94,8 +94,8 @@
                         <!-- Floating badge: Experience -->
                         <div class="absolute -left-6 top-12 bg-[var(--surface)] rounded-2xl shadow-xl p-4 border border-[var(--border-light)] animate-on-scroll slide-right" style="animation-delay:0.5s;">
                             <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(44,74,62,0.1);">
-                                    <i class="fas fa-scissors text-[var(--primary)] text-lg"></i>
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[rgba(44,74,62,0.1)] dark:bg-[rgba(201,169,110,0.15)]">
+                                    <i class="fas fa-scissors text-[var(--primary)] dark:text-[var(--accent)] text-lg"></i>
                                 </div>
                                 <div>
                                     <div class="font-bold text-[var(--text-dark)] text-sm" style="font-family:'Playfair Display',serif;">18+ Years</div>
@@ -209,15 +209,15 @@
 
                 <!-- Service 4 -->
                 <div class="service-card animate-on-scroll slide-up" style="animation-delay:0.1s;">
-                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(201,169,110,0.12);">
-                        <i class="fas fa-ring text-[var(--accent)] text-xl"></i>
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-ring text-[var(--primary)] text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-[var(--text-dark)] mb-3" style="font-family:'Playfair Display',serif;">Bridal & Occasion Wear</h3>
                     <p class="text-[var(--text-muted)] text-sm leading-relaxed mb-4">Make your special day unforgettable. Bridal gowns, lehengas, and occasion wear crafted with exceptional artistry.</p>
                     <ul class="space-y-2">
-                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--accent)] text-xs"></i> Designer consultations</li>
-                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--accent)] text-xs"></i> Embroidery & embellishments</li>
-                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--accent)] text-xs"></i> Multiple fittings included</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Designer consultations</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Embroidery & embellishments</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check-circle text-[var(--primary)] text-xs"></i> Multiple fittings included</li>
                     </ul>
                 </div>
 
@@ -295,10 +295,10 @@
                     <p class="text-[var(--text-muted)] text-sm leading-relaxed">Your garment is expertly stitched or altered by our skilled artisans.</p>
                 </div>
                 <div class="flex flex-col items-center text-center animate-on-scroll slide-up" style="animation-delay:0.4s;">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg" style="background:rgba(201,169,110,1);">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg" style="background:var(--primary);">
                         <i class="fas fa-star text-white text-xl"></i>
                     </div>
-                    <div class="w-8 h-8 rounded-full bg-[var(--accent)] text-white flex items-center justify-center text-sm font-bold mb-3 -mt-10 ml-10 relative">4</div>
+                    <div class="w-8 h-8 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-sm font-bold mb-3 -mt-10 ml-10 relative">4</div>
                     <h4 class="font-bold text-[var(--text-dark)] mb-2" style="font-family:'Playfair Display',serif;">Perfect Fit Delivered</h4>
                     <p class="text-[var(--text-muted)] text-sm leading-relaxed">Try on your creation, make final adjustments, and walk away in style.</p>
                 </div>
@@ -373,7 +373,7 @@
                     </ul>
                 </div>
                 <div class="turnaround-card animate-on-scroll slide-up" style="animation-delay:0.2s;border-color:rgba(44,74,62,0.3);">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
                         <span class="px-4 py-1.5 rounded-full bg-[var(--primary)] text-white text-xs font-bold uppercase tracking-wider shadow-lg">Most Chosen</span>
                     </div>
                     <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:rgba(44,74,62,0.1);">
@@ -389,16 +389,16 @@
                     </ul>
                 </div>
                 <div class="turnaround-card animate-on-scroll slide-up" style="animation-delay:0.3s;">
-                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:rgba(201,169,110,0.12);">
-                        <i class="fas fa-crown text-[var(--accent)] text-2xl"></i>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:rgba(44,74,62,0.1);">
+                        <i class="fas fa-crown text-[var(--primary)] text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-[var(--text-dark)] mb-2 text-center" style="font-family:'Playfair Display',serif;">Premium</h3>
-                    <div class="text-4xl font-bold text-[var(--accent)] text-center mb-3" style="font-family:'Playfair Display',serif;">14+ Days</div>
+                    <div class="text-4xl font-bold text-[var(--primary)] text-center mb-3" style="font-family:'Playfair Display',serif;">14+ Days</div>
                     <p class="text-[var(--text-muted)] text-sm text-center mb-5">For elaborate bridal wear and complex creations that deserve unhurried perfection.</p>
                     <ul class="space-y-2">
-                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--accent)] text-xs"></i> Bridal & occasion wear</li>
-                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--accent)] text-xs"></i> Hand embroidery</li>
-                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--accent)] text-xs"></i> Unlimited fittings</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> Bridal & occasion wear</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> Hand embroidery</li>
+                        <li class="flex items-center gap-2 text-sm text-[var(--text-muted)]"><i class="fas fa-check text-[var(--primary)] text-xs"></i> Unlimited fittings</li>
                     </ul>
                 </div>
             </div>

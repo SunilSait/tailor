@@ -58,6 +58,12 @@ html.dark {
     --border-medium: rgba(90, 160, 130, 0.25);
     --logo-primary: #4A7C6F;
     --logo-secondary: #C9A96E;
+    --primary: #3D6B5C;
+    --primary-light: #4D8573;
+    --primary-dark: #233F35;
+    --primary-50: rgba(90, 160, 130, 0.1);
+    --primary-100: rgba(90, 160, 130, 0.15);
+    --primary-200: rgba(90, 160, 130, 0.25);
 }
 
 /* ======== 3. RESETS & BASE ======== */
@@ -202,6 +208,15 @@ html.dark #main-nav {
     background-color: color-mix(in srgb, var(--secondary) 92%, transparent);
 }
 
+html.dark .nav-link:hover,
+html.dark .nav-link.active {
+    color: var(--accent);
+}
+
+html.dark .nav-link::after {
+    background: var(--accent);
+}
+
 /* Nav links */
 .nav-link {
     font-size: 0.8125rem;
@@ -256,6 +271,12 @@ html.dark #main-nav {
     background: var(--primary-50);
     color: var(--primary);
     border-color: var(--border-medium);
+}
+
+html.dark .icon-btn-nav:hover {
+    background: rgba(201, 169, 110, 0.1);
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 /* Mobile menu */
@@ -315,6 +336,13 @@ html.dark #mobile-menu {
 html.dark .btn-secondary {
     background: var(--surface-alt);
     border-color: rgba(90,160,130,0.25);
+    color: var(--text-dark);
+}
+
+html.dark .btn-secondary:hover {
+    background: var(--surface);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .btn-accent {
@@ -440,6 +468,12 @@ html.dark .turnaround-card { background: var(--surface-alt); }
     position: relative;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.pricing-card ul {
+    flex-grow: 1;
 }
 .pricing-card:hover {
     box-shadow: var(--shadow-lg);
@@ -619,6 +653,12 @@ html.dark .form-input {
     padding-bottom: 60px;
     padding-top: 140px;
     position: relative;
+}
+
+.page-hero h1 {
+    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.15;
 }
 
 @media (max-width: 768px) {
@@ -970,3 +1010,137 @@ html.dark .icon-btn { background: var(--surface-alt); }
 /* ======== 25. UTILITY ======== */
 /* NOTE: Do NOT use !important here — it would break Tailwind's responsive lg:flex, xl:flex etc. */
 .show { display: block !important; }
+
+/* ===== DARK MODE CONTRAST FIXES ===== */
+html.dark .section-tag {
+    border-color: rgba(201, 169, 110, 0.35);
+    background: rgba(201, 169, 110, 0.08);
+    color: var(--accent);
+}
+
+html.dark .text-\[var\(--primary\)\] {
+    color: var(--accent) !important;
+}
+
+html.dark [style*="background:rgba(44,74,62"],
+html.dark [style*="background: rgba(44, 74, 62"] {
+    background: rgba(201, 169, 110, 0.15) !important;
+}
+
+html.dark [style*="border:1px solid rgba(44,74,62"],
+html.dark [style*="border: 1px solid rgba(44, 74, 62"],
+html.dark [style*="border-color:rgba(44,74,62"],
+html.dark [style*="border-color: rgba(44, 74, 62"] {
+    border-color: rgba(201, 169, 110, 0.25) !important;
+}
+
+html.dark a[style*="color:var(--primary)"],
+html.dark a[style*="color: var(--primary)"] {
+    color: var(--accent) !important;
+}
+
+html.dark #plan-premium-btn {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+html.dark .faq-item.open {
+    border-color: rgba(201, 169, 110, 0.35);
+}
+
+html.dark .faq-item.open .faq-btn {
+    color: var(--accent);
+}
+
+html.dark .faq-icon {
+    background: rgba(201, 169, 110, 0.1);
+    color: var(--accent);
+}
+
+html.dark .faq-item.open .faq-icon {
+    background: var(--accent);
+    color: var(--secondary);
+}
+
+html.dark .icon-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(201, 169, 110, 0.1);
+}
+
+html.dark .service-card:hover {
+    border-color: rgba(201, 169, 110, 0.3);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background: rgba(90, 160, 130, 0.3);
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(90, 160, 130, 0.5);
+}
+
+html.dark .green-text {
+    background: linear-gradient(135deg, #4A7C6F 0%, #8FA89E 50%, #4A7C6F 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 5s linear infinite;
+}
+
+html.dark .stat-number {
+    color: var(--accent);
+}
+
+.tab-btn {
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+    border-color: var(--primary) !important;
+}
+
+html.dark .tab-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent) !important;
+}
+
+.live-map-iframe {
+    transition: filter 0.3s ease;
+}
+
+html.dark .live-map-iframe {
+    filter: invert(90%) hue-rotate(180deg) contrast(1.1) brightness(0.9) grayscale(20%);
+}
+
+/* ===== FOOTER CONTRAST FIXES ===== */
+footer a[aria-label] {
+    border-color: var(--border-medium) !important;
+    color: var(--text-muted) !important;
+}
+
+footer a[aria-label]:hover {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    background: var(--primary-50) !important;
+}
+
+html.dark footer a[aria-label] {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: var(--text-dark) !important;
+}
+
+html.dark footer a[aria-label]:hover {
+    color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    background: rgba(201, 169, 110, 0.1) !important;
+}
+
+html.dark .footer-link:hover {
+    color: var(--accent) !important;
+}
