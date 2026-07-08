@@ -970,7 +970,7 @@ html.dark .btn-social {
 html.dark .icon-btn { background: var(--surface-alt); }
 
 /* ======== 21. RESPONSIVE ======== */
-@media (max-width: 1024px) {
+@media (max-width: 1279px) {
     #desktop-links { display: none; }
 }
 
@@ -1144,3 +1144,21 @@ html.dark footer a[aria-label]:hover {
 html.dark .footer-link:hover {
     color: var(--accent) !important;
 }
+
+/* Placeholder contrast fix for glassmorphic form in index.html */
+.booking-form-section .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.booking-form-section .form-input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.booking-form-section .form-input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.booking-form-section .form-input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.booking-form-section .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
