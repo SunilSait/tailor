@@ -72,6 +72,7 @@ html.dark {
 html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
 }
 
 body {
@@ -653,6 +654,7 @@ html.dark .form-input {
     padding-bottom: 60px;
     padding-top: 140px;
     position: relative;
+    overflow: hidden;
 }
 
 .page-hero h1 {
