@@ -12,12 +12,13 @@
     <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#2C4A3E',secondary:'#F5F0E8'}}}}</script>
 </head>
 <body>
+<!-- Top-right controls -->
+<div class="auth-top-icons">
+    <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fas fa-exchange-alt"></i></button>
+</div>
+
 <div class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 py-16" style="background:var(--cream);">
-    <!-- Top-right controls -->
-    <div class="auth-top-icons">
-        <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fas fa-exchange-alt"></i></button>
-    </div>
 
     <!-- Decorative background -->
     <div class="absolute inset-0 pointer-events-none">

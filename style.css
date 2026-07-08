@@ -938,12 +938,12 @@ html.dark .btn-social {
 
 /* Auth icon buttons (top-right) */
 .auth-top-icons {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 8px;
-    z-index: 100;
+    position: absolute !important;
+    top: 5px !important;
+    right: 20px !important;
+    display: flex !important;
+    gap: 8px !important;
+    z-index: 9999 !important;
 }
 
 .icon-btn {
