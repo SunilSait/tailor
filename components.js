@@ -177,12 +177,12 @@
                     <div class="space-y-4">
                         <h5 class="font-bold text-[var(--text-dark)] uppercase tracking-wider text-xs" style="font-family:'Playfair Display',serif;">Services</h5>
                         <ul class="space-y-2.5">
-                            <li><a href="services.html" class="footer-link">Custom Stitching</a></li>
-                            <li><a href="services.html" class="footer-link">Alterations & Repairs</a></li>
-                            <li><a href="services.html" class="footer-link">Bridal Wear</a></li>
-                            <li><a href="services.html" class="footer-link">Measurements</a></li>
-                            <li><a href="services.html" class="footer-link">Fabric Sourcing</a></li>
-                            <li><a href="services.html" class="footer-link">Express Service</a></li>
+                            <li><a href="services.html#custom-stitching" class="footer-link">Custom Stitching</a></li>
+                            <li><a href="services.html#alterations" class="footer-link">Alterations & Repairs</a></li>
+                            <li><a href="services.html#bridal-wear" class="footer-link">Bridal & Occasion Wear</a></li>
+                            <li><a href="services.html#measurements" class="footer-link">Professional Measurements</a></li>
+                            <li><a href="services.html#fabric-selection" class="footer-link">Fabric Selection</a></li>
+                            <li><a href="services.html#express-service" class="footer-link">Express Service</a></li>
                         </ul>
                     </div>
 
@@ -190,13 +190,13 @@
                     <div class="space-y-4">
                         <h5 class="font-bold text-[var(--text-dark)] uppercase tracking-wider text-xs" style="font-family:'Playfair Display',serif;">Quick Links</h5>
                         <ul class="space-y-2.5">
-                            <li><a href="index.html" class="footer-link">Home</a></li>
+                            <li><a href="index.html" class="footer-link">Home (Classic)</a></li>
+                            <li><a href="home2.html" class="footer-link">Home (Premium)</a></li>
                             <li><a href="about.html" class="footer-link">About Us</a></li>
-                            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
-                            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
-                            <li><a href="login.html" class="footer-link">Login</a></li>
-                            <li><a href="404.html" class="footer-link">404 Page</a></li>
-                            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+                            <li><a href="services.html" class="footer-link">Our Services</a></li>
+                            <li><a href="gallery.html" class="footer-link">Work Gallery</a></li>
+                            <li><a href="pricing.html" class="footer-link">Pricing Guide</a></li>
+                            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
                         </ul>
                     </div>
 
