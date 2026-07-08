@@ -78,13 +78,13 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 xl:px-6">
                 <div class="flex justify-between items-center h-20">
                     <!-- Logo -->
-                    <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+                    <a href="index.html" class="brand-logo-container shrink-0">
                         ${LOGO_SVG}
                         <div class="leading-tight">
-                            <span class="font-bold text-xl block text-[var(--text-dark)] group-hover:text-[var(--primary)] dark:group-hover:text-[var(--accent)] transition-colors" style="font-family:'Playfair Display',serif;line-height:1.1;">
+                            <span class="brand-logo-text text-xl block">
                                 ${BRAND_NAME}
                             </span>
-                            <span class="text-[10px] text-[var(--text-muted)] uppercase tracking-widest font-medium hidden sm:block">Expert Tailoring</span>
+                            <span class="brand-logo-tagline hidden sm:block">Expert Tailoring</span>
                         </div>
                     </a>
 
@@ -158,11 +158,11 @@
                     
                     <!-- Left Brand Column -->
                     <div class="lg:col-span-4 space-y-6">
-                        <a href="index.html" class="flex items-center gap-3 group">
+                        <a href="index.html" class="brand-logo-container light-text">
                             ${LOGO_SVG}
                             <div class="leading-tight">
-                                <span class="font-bold text-2xl block text-white group-hover:text-[var(--accent)] transition-colors" style="font-family:'Playfair Display',serif;">${BRAND_NAME}</span>
-                                <span class="text-[10px] text-white/50 uppercase tracking-widest font-medium">Expert Tailoring</span>
+                                <span class="brand-logo-text text-2xl block">${BRAND_NAME}</span>
+                                <span class="brand-logo-tagline">Expert Tailoring</span>
                             </div>
                         </a>
                         <p class="text-sm text-white/60 leading-relaxed max-w-sm">

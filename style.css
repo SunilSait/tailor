@@ -849,18 +849,10 @@ html.dark .auth-card {
 @media (max-width: 480px) { .auth-card { padding: 32px 24px; border-radius: 20px; } }
 
 .auth-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     justify-content: center;
     margin-bottom: 28px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    font-family: 'Playfair Display', serif;
-    transition: color 0.2s ease;
+    width: 100%;
 }
-.auth-logo:hover { color: var(--primary); }
 
 .auth-title {
     font-size: 1.75rem;
@@ -1178,5 +1170,63 @@ html.dark .footer-link:hover {
 }
 .booking-form-section .form-input::placeholder {
     color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ==========================================================================
+   BRAND LOGO STYLES (Header, Footer, Auth, 404, Coming Soon)
+   ========================================================================== */
+.brand-logo-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brand-logo-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.brand-logo-tagline {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+    margin-top: 1px;
+    line-height: 1;
+}
+
+.brand-logo-container div {
+    line-height: 1.1 !important;
+}
+
+/* Light text variant for dark backgrounds (Footer & 404 Page) */
+.brand-logo-container.light-text .brand-logo-text {
+    color: #ffffff;
+}
+
+.brand-logo-container.light-text .brand-logo-tagline {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Consistent Hover Effect: Color transitions to accent (gold) */
+.brand-logo-container:hover .brand-logo-text {
+    color: var(--accent) !important;
+}
+
+/* Premium micro-interaction on hover: SVG scale */
+.brand-logo-container:hover svg {
+    transform: scale(1.05);
+}
+
+.brand-logo-container svg {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 

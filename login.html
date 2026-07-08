@@ -34,10 +34,10 @@
     <!-- Auth Card -->
     <div class="auth-card animate-on-scroll zoom-in">
         <!-- Logo -->
-        <a href="index.html" class="auth-logo" id="login-logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <a href="index.html" class="brand-logo-container auth-logo" id="login-logo" style="text-decoration:none;">
             <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <linearGradient id="scGradLogin" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient id="scGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="var(--logo-primary)"/>
                         <stop offset="100%" stop-color="var(--logo-secondary)"/>
                     </linearGradient>
@@ -45,20 +45,20 @@
                 <!-- Outer circle -->
                 <circle cx="50" cy="50" r="46" stroke="var(--logo-primary)" stroke-width="2" stroke-opacity="0.35" fill="none"/>
                 <!-- Scissors body -->
-                <circle cx="34" cy="34" r="9" stroke="url(#scGradLogin)" stroke-width="2.5" fill="none"/>
-                <circle cx="66" cy="34" r="9" stroke="url(#scGradLogin)" stroke-width="2.5" fill="none"/>
+                <circle cx="34" cy="34" r="9" stroke="url(#scGrad)" stroke-width="2.5" fill="none"/>
+                <circle cx="66" cy="34" r="9" stroke="url(#scGrad)" stroke-width="2.5" fill="none"/>
                 <!-- Scissors blades -->
-                <line x1="40" y1="40" x2="70" y2="75" stroke="url(#scGradLogin)" stroke-width="3" stroke-linecap="round"/>
-                <line x1="60" y1="40" x2="30" y2="75" stroke="url(#scGradLogin)" stroke-width="3" stroke-linecap="round"/>
+                <line x1="40" y1="40" x2="70" y2="75" stroke="url(#scGrad)" stroke-width="3" stroke-linecap="round"/>
+                <line x1="60" y1="40" x2="30" y2="75" stroke="url(#scGrad)" stroke-width="3" stroke-linecap="round"/>
                 <!-- Center bolt -->
                 <circle cx="50" cy="50" r="3.5" fill="var(--logo-primary)"/>
                 <!-- Needle at bottom -->
                 <path d="M50 62 L50 82" stroke="var(--logo-secondary)" stroke-width="2" stroke-linecap="round"/>
                 <circle cx="50" cy="85" r="2.5" fill="var(--logo-secondary)" opacity="0.7"/>
             </svg>
-            <div style="line-height:1.2;">
-                <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;display:block;color:var(--text-dark);">StitchCraft</span>
-                <span style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.12em;font-weight:500;">Expert Tailoring</span>
+            <div class="leading-tight text-left">
+                <span class="brand-logo-text text-xl block">StitchCraft</span>
+                <span class="brand-logo-tagline">Expert Tailoring</span>
             </div>
         </a>
 
