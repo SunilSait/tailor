@@ -95,6 +95,16 @@
 
                     <!-- Right Actions -->
                     <div class="flex items-center gap-2">
+                        <!-- RTL Toggle -->
+                        <button id="dir-toggle" class="icon-btn-nav js-dir-toggle hidden xl:flex" aria-label="Toggle RTL" title="Toggle RTL">
+                            <i class="fas fa-exchange-alt text-sm"></i>
+                        </button>
+
+                        <!-- Theme Toggle -->
+                        <button id="theme-toggle-desktop" class="icon-btn-nav js-theme-toggle hidden xl:flex" aria-label="Toggle theme" title="Toggle Theme">
+                            <i class="fas fa-moon text-sm"></i>
+                        </button>
+
                         <!-- Secondary CTA: Sign Up -->
                         <a href="signup.html" class="hidden xl:inline-flex items-center gap-2 btn btn-secondary btn-rounded text-xs" style="padding:9px 20px;" id="nav-signup-btn">
                             Sign Up
@@ -115,10 +125,16 @@
                         ${navLinksMobile}
                     </div>
                     <div class="flex flex-col sm:flex-row items-center justify-between gap-3 px-5 pt-4 border-t border-[var(--border-light)]">
-                        <div></div>
+                        <div class="flex gap-2.5 w-full sm:w-auto justify-center sm:justify-start">
+                            <button class="icon-btn-nav js-dir-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                                <i class="fas fa-exchange-alt text-sm"></i>
+                            </button>
+                            <button class="icon-btn-nav js-theme-toggle" aria-label="Toggle theme" title="Toggle Theme">
+                                <i class="fas fa-moon text-sm"></i>
+                            </button>
+                        </div>
                         <div class="flex gap-2 w-full sm:w-auto">
-                            <a href="signup.html" class="flex-1 sm:flex-none text-center btn btn-secondary btn-rounded text-xs" style="padding:11px 20px;">Sign Up</a>
-                            <a href="contact.html#booking" class="flex-1 sm:flex-none text-center btn btn-primary btn-rounded btn-shine text-xs" style="padding:11px 20px;">Book Appointment</a>
+                            <a href="signup.html" class="w-full sm:w-auto text-center btn btn-secondary btn-rounded text-xs" style="padding:11px 20px;">Sign Up</a>
                         </div>
                     </div>
                 </div>
