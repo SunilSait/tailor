@@ -44,17 +44,32 @@
     <div class="relative z-10 text-center max-w-2xl">
         <!-- Logo -->
         <div class="mb-12">
-            <a href="index.html" class="inline-flex items-center gap-2.5 group" id="cs-logo">
+            <a href="index.html" class="inline-flex items-center gap-2.5 group" id="cs-logo" style="text-decoration:none;">
                 <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
-                    <defs><linearGradient id="gCS" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2C4A3E"/><stop offset="100%" stop-color="#C9A96E"/></linearGradient></defs>
+                    <defs>
+                        <linearGradient id="gCS" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#2C4A3E"/>
+                            <stop offset="100%" stop-color="#C9A96E"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Outer circle -->
                     <circle cx="50" cy="50" r="46" stroke="#2C4A3E" stroke-width="2" stroke-opacity="0.35" fill="none"/>
+                    <!-- Scissors body -->
                     <circle cx="34" cy="34" r="9" stroke="url(#gCS)" stroke-width="2.5" fill="none"/>
                     <circle cx="66" cy="34" r="9" stroke="url(#gCS)" stroke-width="2.5" fill="none"/>
+                    <!-- Scissors blades -->
                     <line x1="40" y1="40" x2="70" y2="75" stroke="url(#gCS)" stroke-width="3" stroke-linecap="round"/>
                     <line x1="60" y1="40" x2="30" y2="75" stroke="url(#gCS)" stroke-width="3" stroke-linecap="round"/>
+                    <!-- Center bolt -->
                     <circle cx="50" cy="50" r="3.5" fill="#2C4A3E"/>
+                    <!-- Needle at bottom -->
+                    <path d="M50 62 L50 82" stroke="#C9A96E" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="50" cy="85" r="2.5" fill="#C9A96E" opacity="0.7"/>
                 </svg>
-                <span class="font-bold text-2xl text-[var(--text-dark)] group-hover:text-[var(--primary)] transition-colors" style="font-family:'Playfair Display',serif;">StitchCraft</span>
+                <div class="text-left" style="line-height:1.2;">
+                    <span class="font-bold text-2xl block text-[var(--text-dark)] group-hover:text-[var(--primary)] transition-colors" style="font-family:'Playfair Display',serif;">StitchCraft</span>
+                    <span style="font-size:0.65rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.15em;font-weight:600;display:block;">Expert Tailoring</span>
+                </div>
             </a>
         </div>
 

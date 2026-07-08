@@ -145,94 +145,92 @@
     // --- Render Footer ---
     function renderFooter() {
         const socialLinksHtml = SOCIAL_LINKS.map(s =>
-            `<a href="${s.href}" aria-label="${s.label}" class="w-10 h-10 flex items-center justify-center rounded-full border border-[var(--border-light)] text-[var(--text-muted)] hover:text-[var(--primary)] hover:border-[var(--primary)] hover:-translate-y-1 transition-all duration-300">
+            `<a href="${s.href}" aria-label="${s.label}" class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-white/50 hover:text-white hover:border-white hover:-translate-y-1 transition-all duration-300">
                 <i class="${s.icon} text-sm"></i>
             </a>`
         ).join('');
 
         return `
-        <footer class="pt-16 pb-6">
+        <footer class="pt-16 pb-8 relative" style="background-color: #0b1210; border-top: 1px solid rgba(201, 169, 110, 0.15);">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <!-- Main Footer Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
-                    <!-- Brand -->
-                    <div class="lg:col-span-1 space-y-5">
-                        <a href="index.html" class="flex items-center gap-2.5 group">
+                <!-- Main Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
+                    
+                    <!-- Left Brand Column -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <a href="index.html" class="flex items-center gap-3 group">
                             ${LOGO_SVG}
-                            <div>
-                                <span class="font-bold text-xl block text-[var(--text-dark)] group-hover:text-[var(--primary)] dark:group-hover:text-[var(--accent)] transition-colors" style="font-family:'Playfair Display',serif;">${BRAND_NAME}</span>
-                                <span class="text-[10px] text-[var(--text-muted)] uppercase tracking-widest">Expert Tailoring</span>
+                            <div class="leading-tight">
+                                <span class="font-bold text-2xl block text-white group-hover:text-[var(--accent)] transition-colors" style="font-family:'Playfair Display',serif;">${BRAND_NAME}</span>
+                                <span class="text-[10px] text-white/50 uppercase tracking-widest font-medium">Expert Tailoring</span>
                             </div>
                         </a>
-                        <p class="text-sm text-[var(--text-muted)] leading-relaxed">
-                            Premium tailoring & alteration services crafted with precision and care. Every stitch tells your story.
+                        <p class="text-sm text-white/60 leading-relaxed max-w-sm">
+                            Premium tailoring & alteration services crafted with precision and care. Elevating every garment with bespoke master craftsmanship.
                         </p>
-                        <div class="flex gap-2">${socialLinksHtml}</div>
+                        <!-- Social Links -->
+                        <div class="flex gap-3">
+                            ${socialLinksHtml}
+                        </div>
                     </div>
 
-                    <!-- Services -->
-                    <div class="space-y-4">
-                        <h5 class="font-bold text-[var(--text-dark)] uppercase tracking-wider text-xs" style="font-family:'Playfair Display',serif;">Services</h5>
-                        <ul class="space-y-2.5">
-                            <li><a href="services.html#custom-stitching" class="footer-link">Custom Stitching</a></li>
-                            <li><a href="services.html#alterations" class="footer-link">Alterations & Repairs</a></li>
-                            <li><a href="services.html#bridal-wear" class="footer-link">Bridal & Occasion Wear</a></li>
-                            <li><a href="services.html#measurements" class="footer-link">Professional Measurements</a></li>
-                            <li><a href="services.html#fabric-selection" class="footer-link">Fabric Selection</a></li>
-                            <li><a href="services.html#express-service" class="footer-link">Express Service</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div class="space-y-4">
-                        <h5 class="font-bold text-[var(--text-dark)] uppercase tracking-wider text-xs" style="font-family:'Playfair Display',serif;">Quick Links</h5>
-                        <ul class="space-y-2.5">
-                            <li><a href="index.html" class="footer-link">Home (Classic)</a></li>
-                            <li><a href="home2.html" class="footer-link">Home (Premium)</a></li>
-                            <li><a href="about.html" class="footer-link">About Us</a></li>
-                            <li><a href="services.html" class="footer-link">Our Services</a></li>
-                            <li><a href="gallery.html" class="footer-link">Work Gallery</a></li>
-                            <li><a href="pricing.html" class="footer-link">Pricing Guide</a></li>
-                            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact -->
-                    <div class="space-y-4">
-                        <h5 class="font-bold text-[var(--text-dark)] uppercase tracking-wider text-xs" style="font-family:'Playfair Display',serif;">Contact</h5>
+                    <!-- Quick Links Column -->
+                    <div class="lg:col-span-2 space-y-4">
+                        <h5 class="text-white font-bold text-xs uppercase tracking-[0.2em]" style="font-family:'Playfair Display',serif;">Quick Links</h5>
                         <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-map-marker-alt text-[var(--primary)] mt-1 text-xs flex-shrink-0"></i>
-                                <span class="text-sm text-[var(--text-muted)]">${ADDRESS}</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="fas fa-phone text-[var(--primary)] text-xs flex-shrink-0"></i>
-                                <a href="tel:+919876543210" class="footer-link text-sm">${PHONE}</a>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="fas fa-envelope text-[var(--primary)] text-xs flex-shrink-0"></i>
-                                <a href="mailto:${EMAIL}" class="footer-link text-sm">${EMAIL}</a>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-clock text-[var(--primary)] mt-1 text-xs flex-shrink-0"></i>
-                                <span class="text-sm text-[var(--text-muted)]">Mon–Sat: 9am – 8pm<br>Sunday: 10am – 6pm</span>
-                            </li>
+                            <li><a href="index.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">Home</a></li>
+                            <li><a href="home2.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">Home 2 — Premium</a></li>
+                            <li><a href="services.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">Services</a></li>
+                            <li><a href="gallery.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">Gallery</a></li>
+                            <li><a href="pricing.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">Pricing</a></li>
+                            <li><a href="about.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">About Studio</a></li>
                         </ul>
                     </div>
+
+                    <!-- Resources Column -->
+                    <div class="lg:col-span-2 space-y-4">
+                        <h5 class="text-white font-bold text-xs uppercase tracking-[0.2em]" style="font-family:'Playfair Display',serif;">Resources</h5>
+                        <ul class="space-y-3">
+                            <li><a href="contact.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">Contact Studio</a></li>
+                            <li><a href="coming-soon.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">Coming Soon</a></li>
+                            <li><a href="404.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">404 Page</a></li>
+                            <li><a href="login.html" class="text-sm text-white/60 hover:text-[var(--accent)] hover:translate-x-1 inline-block transition-all duration-300">Sign In</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter Card Box -->
+                    <div class="lg:col-span-4 bg-[#111c19] border border-white/5 rounded-3xl p-6 lg:p-8 space-y-5">
+                        <h5 class="text-white text-xl font-bold font-serif leading-tight" style="font-family:'Playfair Display',serif;">Stay Tailored</h5>
+                        <p class="text-sm text-white/60 leading-relaxed">
+                            Subscribe for studio updates, style guides & exclusive seasonal collections.
+                        </p>
+                        <form class="space-y-3" onsubmit="event.preventDefault(); alert('Subscribed to StitchCraft newsletter!');">
+                            <input type="email" placeholder="your@email.com" required class="w-full bg-[#0b1210] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[var(--accent)] transition-all">
+                            <button type="submit" class="w-full bg-[var(--accent)] hover:bg-[var(--accent-light)] text-[var(--text-dark)] font-bold text-sm py-3 rounded-xl transition-all duration-300 shadow-lg shadow-[rgba(201,169,110,0.15)] active:scale-[0.98]">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+
                 </div>
 
-                <!-- Bottom Bar -->
-                <div class="border-t border-[var(--border-light)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p class="text-sm text-[var(--text-muted)] text-center sm:text-left">
-                        &copy; ${CURRENT_YEAR} ${BRAND_NAME}. All rights reserved.
+                <!-- Bottom Divider -->
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-xs text-white/45 tracking-wider uppercase font-medium">
+                        &copy; ${CURRENT_YEAR} STITCHCRAFT. CRAFTED WITH ✦ PRECISION.
                     </p>
-                    <div class="flex items-center gap-6">
-                        <a href="#" class="footer-link text-xs">Privacy Policy</a>
-                        <a href="#" class="footer-link text-xs">Terms of Service</a>
-                        <a href="contact.html" class="footer-link text-xs">Contact</a>
+                    <div class="flex items-center gap-6 text-xs text-white/45 font-medium tracking-wider uppercase">
+                        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                        <a href="#" class="hover:text-white transition-colors">Terms</a>
+                        <a href="tel:+919876543210" class="hover:text-white transition-colors">${PHONE}</a>
                     </div>
                 </div>
             </div>
+            
+            <!-- Floating Back to Top Button -->
+            <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[var(--accent)] hover:bg-[var(--accent-light)] text-[var(--text-dark)] flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 pointer-events-none hover:-translate-y-1 z-50">
+                <i class="fas fa-chevron-up"></i>
+            </button>
         </footer>`;
     }
 
@@ -312,6 +310,23 @@
                 } else {
                     mainNav.style.boxShadow = 'none';
                 }
+            });
+        }
+
+        // Back to Top scroll and click logic
+        const backToTopBtn = document.getElementById('back-to-top');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    backToTopBtn.classList.add('opacity-100');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100');
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
     }

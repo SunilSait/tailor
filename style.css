@@ -72,7 +72,7 @@ html.dark {
 html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
@@ -82,7 +82,7 @@ body {
     line-height: 1.6;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -194,8 +194,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ======== 7. NAVBAR ======== */
 #main-nav {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 1000;
     background: rgba(var(--cream-rgb, 248, 244, 236), 0.90);
     backdrop-filter: blur(20px);
@@ -356,6 +359,19 @@ html.dark .btn-secondary:hover {
     border-color: var(--accent-light);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(201, 169, 110, 0.35);
+}
+
+.btn-outline-accent {
+    background: transparent;
+    color: var(--accent);
+    border-color: rgba(201, 169, 110, 0.45);
+}
+.btn-outline-accent:hover {
+    background: rgba(201, 169, 110, 0.12);
+    color: var(--accent-light);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(201, 169, 110, 0.2);
 }
 
 .btn-lg { padding: 15px 32px; font-size: 0.9375rem; }
