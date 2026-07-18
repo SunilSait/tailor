@@ -161,7 +161,7 @@
                         <a href="index.html" class="brand-logo-container light-text">
                             ${LOGO_SVG}
                             <div class="leading-tight">
-                                <span class="brand-logo-text text-2xl block">${BRAND_NAME}</span>
+                                <span class="brand-logo-text text-xl block">${BRAND_NAME}</span>
                                 <span class="brand-logo-tagline">Expert Tailoring</span>
                             </div>
                         </a>

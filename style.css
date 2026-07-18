@@ -916,12 +916,43 @@ html.dark .auth-divider { background: var(--surface-alt); }
 .auth-footer-text a { color: var(--primary); font-weight: 600; }
 .auth-footer-text a:hover { text-decoration: underline; }
 
+.consent-link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(44, 74, 62, 0.4);
+    transition: all 0.2s ease;
+}
+.consent-link:hover {
+    color: var(--primary-light);
+    text-decoration-color: var(--primary);
+}
+.consent-link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+html.dark .consent-link {
+    color: var(--accent);
+    text-decoration-color: rgba(201, 169, 110, 0.4);
+}
+html.dark .consent-link:hover {
+    color: var(--accent-light);
+    text-decoration-color: var(--accent);
+}
+html.dark .consent-link:focus-visible {
+    outline-color: var(--accent);
+}
+
+
 /* Social buttons */
 .btn-social {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     width: 100%;
     padding: 11px 20px;
     border-radius: 12px;
@@ -934,11 +965,19 @@ html.dark .auth-divider { background: var(--surface-alt); }
     cursor: pointer;
     transition: all 0.2s ease;
 }
+.btn-social svg {
+    position: absolute;
+    left: 20px;
+    flex-shrink: 0;
+}
 .btn-social:hover {
     border-color: var(--border-medium);
     background: var(--primary-50);
     transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
+}
+.btn-social:focus-visible {
+    border-radius: 12px;
 }
 
 html.dark .btn-social {
@@ -1229,4 +1268,34 @@ html.dark .footer-link:hover {
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
+
+/* ==========================================================================
+   RTL MODE OVERRIDES (Authentication Pages)
+   ========================================================================== */
+html[dir="rtl"] .auth-top-icons {
+    right: auto !important;
+    left: 20px !important;
+}
+
+html[dir="rtl"] .input-wrapper .form-input {
+    padding-right: 16px !important;
+    padding-left: 48px !important;
+}
+
+html[dir="rtl"] .toggle-password {
+    right: auto !important;
+    left: 14px !important;
+}
+
+html[dir="rtl"] .btn-social svg {
+    left: auto !important;
+    right: 20px !important;
+}
+
+html[dir="rtl"] .form-input[type="tel"],
+html[dir="rtl"] .form-input[type="email"] {
+    text-align: right !important;
+    direction: ltr !important;
+}
+
 
